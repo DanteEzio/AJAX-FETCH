@@ -1,0 +1,16 @@
+<svg id="broadcast-icon.svg" xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #76b900;
+        fill-rule: evenodd;
+      }
+
+      .cls-2 {
+        fill: none;
+      }
+    </style>
+  </defs>
+  <path id="_Compound_Path_" data-name="&lt;Compound Path&gt;" class="cls-1" d="M5504.67,699.167V668.5h-49.34v30.667h19.8l-1.07,4H5470V704.5h20v-1.333h-4.06l-1.07-4h19.8Zm-48-29.334h46.66v28h-46.66v-28Zm27.89,33.334h-9.12l1.07-4h6.98ZM5458,696.5h44V671.167h-44V696.5Zm1.33-24h41.34v22.667h-41.34V672.5Zm20.67,16a7.334,7.334,0,1,0-7.33-7.333A7.341,7.341,0,0,0,5480,688.5Zm0-13.333a6,6,0,1,1-6,6A6.005,6.005,0,0,1,5480,675.167Zm-11.33,14.666h26.66v1.334h-26.66V692.5h-1.34v-1.333h-2.66v-1.334h2.66V688.5h1.34v1.333Zm9.33-12.579v7.825l5.87-3.912Zm1.33,2.491,2.13,1.422-2.13,1.42v-2.842Z" transform="translate(-5448 -654.5)"/>
+  <rect id="_Rectangle_" data-name="&lt;Rectangle&gt;" class="cls-2" width="64" height="64"/>
+</svg>

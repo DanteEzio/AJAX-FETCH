@@ -1,0 +1,16 @@
+<svg id="dlss-icon.svg" xmlns="http://www.w3.org/2000/svg" width="64" height="64.5" viewBox="0 0 64 64.5">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #76b900;
+        fill-rule: evenodd;
+      }
+
+      .cls-2 {
+        fill: none;
+      }
+    </style>
+  </defs>
+  <path id="_Compound_Path_" data-name="&lt;Compound Path&gt;" class="cls-1" d="M5635.67,130.142H5637v14.78h-24V120.736h14.67v1.344h-13.34v21.5h21.34V130.142Zm-21.34-16.124H5613v4.031h1.33v-4.031Zm0-6.718H5613v4.031h1.33V107.3Zm25.34,37.622h4v-1.343h-4v1.343Zm6.66,0h4v-1.343h-4v1.343Zm-32-43H5617v-1.343h-4v4.031h1.33v-2.688Zm41.34,29.561H5657v-4.031h-1.33v4.031Zm0,6.718H5657v-4.031h-1.33V138.2Zm0-20.155H5657v-4.031h-1.33v4.031Zm0,6.718H5657v-4.031h-1.33v4.031Zm-25.34-24.185h-4v1.343h4v-1.343Zm-6.66,0h-4v1.343h4v-1.343Zm16,1.343h4v-1.343h-4v1.343Zm-2.67-1.343h-4v1.343h4v-1.343Zm18.67,43H5653v1.343h4v-4.031h-1.33v2.688Zm0-32.248H5657V107.3h-1.33v4.031Zm-9.34-9.406h4v-1.343h-4v1.343Zm6.67-1.343v1.343h2.67v2.688H5657v-4.031h-4Zm-21.33,14.78h9.72l-12.67,12.765,0.95,0.95,12.66-12.765v9.8h1.34V114.018h-12v1.344Z" transform="translate(-5603 -90.5)"/>
+  <rect id="_Rectangle_" data-name="&lt;Rectangle&gt;" class="cls-2" width="64" height="64.5"/>
+</svg>

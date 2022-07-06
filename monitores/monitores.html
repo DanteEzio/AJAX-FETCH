@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Monitores G-SYNC | nvidia</title>
+
+    <!-- LOGO PÁGINA -->
+    <link
+      class="icono-principal"
+      rel="shortcut icon"
+      href="../imagenes/LogoNvidiaPagina.png"
+      type="image/x-icon"
+      width="16px"
+      height="16px"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/main.css" />
+
+    <!-- Bootstrap - CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+
+    <!-- Bootstrap - JavaScript -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Bootstrap - Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css"
+    />
+
+    <!-- Font-Awesome -->
+    <script
+      src="https://kit.fontawesome.com/c98c29ff31.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- SweetAlert -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- *** Código JavaScript *** -->
+    <!-- Archivo Principal -->
+    <script defer src="app.js"></script>
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="sticky-top">
+      <nav class="navbar navbar-expand-lg bg-light sticky-top">
+        <div class="container">
+          <!-- Logo -->
+          <a class="navbar-brand" href="../index.html">
+            <img src="../imagenes/Nvidia-Horizontal-Logo.wine.svg" alt="" />
+          </a>
+          <!-- Pestañas -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="offcanvas offcanvas-end"
+            tabindex="-1"
+            id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel"
+          >
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+                Offcanvas
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="offcanvas-body">
+              <!-- Pestañas izquierda -->
+              <ul
+                class="navbar-nav justify-content-start flex-grow-1 pe-3 py-1"
+              >
+                <li class="nav-item">
+                  <a
+                    class="nav-link"
+                    aria-current="page"
+                    href="../Laptops/laptops.html"
+                    >Laptops</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../tGraficas/tGraficas.html"
+                    >Tarjetas Gráficas</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="monitores.html"
+                    >Monitores G-SYNC</a
+                  >
+                </li>
+              </ul>
+              <!-- Pestañas derecha -->
+              <ul
+                class="navbar-nav navbar-adicional justify-content-end flex-grow-1 pe-1 py-2"
+              >
+                <li class="nav-item">
+                  <a class="nav-link" href="#">DRIVERS</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">SOPORTE</a>
+                </li>
+              </ul>
+              <!-- Iconos -->
+              <ul
+                class="navbar-nav navbar-icons flex-row flex-wrap pt-1"
+              >
+                <li class="nav-item">
+                  <a class="nav-link" href=""
+                    ><i class="bi bi-search fa-lg"></i
+                  ></a>
+                </li>
+                <!-- Carrito de Compras -->
+                <li class="nav-item" id="contadorCar">
+                  <button
+                    id="open"
+                    class="nav-link text-body btn btn-primary"
+                    type="button"
+                    data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasRight"
+                    aria-controls="offcanvasRight"
+                  >
+                    <i class="bi bi-cart fa-lg"></i
+                    ><span id="contador-carrito">0</span>
+                  </button>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href=""
+                    ><i class="bi bi-person-circle fa-lg"></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <nav class="navbar navbar-expand-lg sticky-top navbar-dos sticky-top">
+        <div class="container">
+          <!-- Pestañas -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="offcanvas offcanvas-end"
+            tabindex="-1"
+            id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel"
+          >
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+                Offcanvas
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="offcanvas-body">
+              <!-- Pestañas izquierda -->
+              <ul
+                class="navbar-nav justify-content-start flex-grow-1 pe-3 py-1"
+              >
+                <li class="nav-item">
+                  <a
+                    class="nav-link active"
+                    aria-current="page"
+                    href="laptops.html"
+                  >
+                    MONITORES G-SYNC 
+                  </a>
+                </li>
+              </ul>
+              <!-- Pestañas derecha -->
+              <ul
+                class="navbar-nav navbar-adicional justify-content-end flex-grow-1 pe-1 py-2"
+              >
+                <li class="nav-item">
+                  <a class="nav-link" href="#rendimiento"
+                    >RENDIMIENTO</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#calidadImagen">CALIDAD DE IMAGEN</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#masRapido">Hz MÁS RÁPIDO</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#formatoGrande"
+                    >MONITORES DE FORMATO GRANDE</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#calidadProbada"
+                    >CALIDAD PROBADA</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#ventajas"
+                    >VENTAJAS</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link linkComprar" href="#comprarAhora"
+                    >COMPRAR AHORA</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- MAIN -->
+    <main>
+      <div class="monitores">
+        <!-- Foto-principal -->
+        <section
+          class="foto-principal"
+          style="
+            background-image: url('../imagenes/carousel-4.jpg');
+            height: 770px;
+          "
+        >
+          <div class="card bg-dark text-white container">
+            <div class="card-img-overlay">
+              <img src="../imagenes/geforce-g-sync-logo.svg" alt="" />
+              <h1>Diseñados para los Juegos</h1>
+              <p>
+                Ya usas la tecnología GeForce® para disfrutar de los juegos más
+                intensos, realistas y cautivantes. ¿Por qué no disfrutar de lo
+                mismo en tu pantalla para juegos?
+                <br />
+                <br />
+                Las pantallas NVIDIA® G-SYNC® se prueban rigurosamente para
+                cumplir con los más altos estándares. Inmersión perfecta y sin
+                fragmentaciones. Tecnología revolucionaria. Con las tasas de
+                actualización más altas para brindar un rendimiento insuperable.
+                En cada juego. Siempre. En cualquier lugar.
+              </p>
+              <a href=""><i class="fa-solid fa-play"></i> Ver Video</a>
+            </div>
+          </div>
+        </section>
+
+        <!-- Caraceristicas -->
+        <section class="caracteristicas">
+          <h1 class="text-center">Pantallas para Juegos para Todos</h1>
+          <div class="container text-center">
+            <div class="row">
+              <div class="col-4">
+                <h2>G-Sync Ultimate</h2>
+                <p>
+                  Cuentan con los mejores procesadores NVIDIA G-SYNC para
+                  ofrecer la experiencia de juego definitiva, con HDR realista,
+                  contraste increíble, color de calidad cinematográfica y
+                  jugabilidad de latencia ultrabaja.
+                </p>
+              </div>
+              <div class="col-4">
+                <h2>G-Sync</h2>
+                <p>
+                  Cuenta con un procesador NVIDIA G-SYNC para ofrecer una
+                  experiencia asombrosa sin fragmentaciones, desfasajes ni
+                  retrasos. Los jugadores entusiastas y profesionales pueden
+                  aprovechar todo el rango de la tasa de actualización variable
+                  (VRR) y la modificación variable para disfrutar de una imagen
+                  prístina y una jugabilidad sobresaliente.
+                </p>
+              </div>
+              <div class="col-4">
+                <h2>G-Sync Compatible</h2>
+                <p>
+                  Si bien no usan los procesadores NVIDIA, cuentan con la
+                  validación de parte de NVIDIA para brindarte una buena
+                  experiencia de tasa de actualización variable (VRR) básica que
+                  te permitirá disfrutar de los juegos sin desfasajes ni
+                  fragmentaciones.
+                </p>
+              </div>
+            </div>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col"></th>
+                  <th scope="col">Validado Sin Detalles Indeseados</th>
+                  <th scope="col">Certificado +300 Pruebas</th>
+                  <th scope="col">HDR Realista</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">G-SYNC ULTIMATE</th>
+                  <td><span class="fas fa-check"></span></td>
+                  <td><span class="fas fa-check"></span></td>
+                  <td><span class="fas fa-check"></span></td>
+                </tr>
+                <tr>
+                  <th scope="row">G-SYNC</th>
+                  <td><span class="fas fa-check"></span></td>
+                  <td><span class="fas fa-check"></span></td>
+                  <td><span class="fas fa-minus"></span></td>
+                </tr>
+                <tr>
+                  <th scope="row">G-SYNC Compatible</th>
+                  <td><span class="fas fa-check"></span></td>
+                  <td><span class="fas fa-minus"></span></td>
+                  <td><span class="fas fa-minus"></span></td>
+                </tr>
+              </tbody>
+            </table>
+            <button type="button" class="btn btn-secondary">
+              VER TODOS LOS MONITORES
+            </button>
+          </div>
+        </section>
+
+        <!-- Rendimiento -->
+        <section
+          class="rendimiento" id="rendimiento"
+          style="
+            background-image: url('../imagenes/rendimiento.jpg');
+            height: 580px;
+          "
+        >
+          <div class="container">
+            <h1>Rendimiento Ultrasensible</h1>
+            <p>
+              Disfruta de un rendimiento excepcional con el rango de frecuencias
+              ilimitado, la latencia más baja y las tasas de actualización más
+              altas de G-SYNC que permiten gráficos muy fluidos y que reaccionan
+              de forma instantánea a lo que ocurre en la pantalla.
+            </p>
+          </div>
+        </section>
+
+        <!-- Calidad de Imagen -->
+        <section
+          class="calidad-imagen" id="calidadImagen"
+          style="
+            background-image: url('../imagenes/calidad.jpg');
+            height: 580px;
+          "
+        >
+          <div class="container">
+            <h1>La Calidad de Imagen Más Realista</h1>
+            <p>
+              Disfruta de cualquier juego sin sufrir fragmentaciones, retrasos,
+              parpadeos ni detalles indeseados. Experimenta una vívida precisión
+              de color gracias al HDR realista los mini-LED que resaltan los
+              detalles como nunca antes (siempre que sean compatibles).
+            </p>
+          </div>
+        </section>
+
+        <!-- Victoria Medida -->
+        <section
+          class="v-medida" id="masRapido"
+          style="
+            background-image: url('../imagenes/victoria-medida.jpg');
+            height: 580px;
+          "
+        >
+          <div class="container">
+            <h1>VICTORIA MEDIDA EN MILISEGUNDOS</h1>
+            <p>
+              Los monitores NVIDIA G-SYNC con Reflex cuentan con la primera y
+              única herramienta de medición de latencia del sistema del mundo,
+              que detecta los clics provenientes de mouse compatibles con Reflex
+              y mide el tiempo que tardan los píxeles resultantes (destello de
+              la boca de la pistola) en cambiar en la pantalla. Con frecuencias
+              de actualización sin ráfagas de hasta 360 Hz, una capacidad de
+              respuesta excepcional, modo de deportes electrónicos integrado y
+              una calidad de imagen sorprendente, los monitores NVIDIA G-SYNC®
+              cambiarán la forma en que se acerca a los juegos competitivos.
+              <br />
+              <br />
+              Para obtener más información visual de los cambios, consulta el
+              anexo.
+            </p>
+            <div class="boton-v">
+              <button type="button" class="btn btn-secondary">
+                MÁS INFORMACIÓN
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <!-- Para juegos -->
+        <section
+          class="para-juegos" id="formatoGrande"
+          style="
+            background-image: url('../imagenes/Para-juegos.jpg');
+            height: 580px;
+          "
+        >
+          <div class="container">
+            <h1>Monitores para Juegos de Formato Grande</h1>
+            <p>
+              Disfruta de los juegos de PC en pantalla gigante desde tu
+              escritorio o sala de estar. Tu experiencia en los juegos es mejor
+              y más cautivante gracias a los monitores para juegos de formato
+              grande, con un tamaño inicial de 48 pulgadas.
+            </p>
+            <div class="boton-juegos">
+              <button type="button" class="btn btn-secondary text-start">
+                MÁS INFORMACIÓN
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <!-- Calidad -->
+        <section
+          class="calidad" id="calidadProbada"
+          style="
+            background-image: url('../imagenes/calidad-2.jpg');
+            height: 580px;
+          "
+        >
+          <div class="container">
+            <h1>Calidad probada por NVIDIA</h1>
+            <p>
+              Cada monitor G-SYNC pasa por un proceso de prueba riguroso para
+              garantizar una calidad constante y el máximo rendimiento. Se han
+              probado cientos de modelos, pero solo aquellos que pasan la prueba
+              se ganan el derecho de llevar el logotipo de G-SYNC.
+            </p>
+            <div class="boton-calidad">
+              <button type="button" class="btn btn-secondary text-start">
+                MÁS INFORMACIÓN
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <!-- Ventajas -->
+        <section class="ventajas" id="ventajas">
+          <h1 class="text-center">Ventajas de G-Sync</h1>
+          <div class="container text-center">
+            <div class="row">
+              <div class="col-4">
+                <img src="../imagenes/v1.jpg" alt="" />
+                <p>
+                  Ofrecen un brillo realista similar al que puede percibir un
+                  ojo humano y un rango de colores mucho más amplio que los
+                  monitores tradicionales.
+                </p>
+              </div>
+              <div class="col-4">
+                <img src="../imagenes/v2.jpg" alt="" />
+                <p>
+                  G-SYNC ofrece el retraso mínimo entre los comandos del teclado
+                  y las acciones en pantalla que exigen los gamers
+                  profesionales.
+                </p>
+              </div>
+              <div class="col-4">
+                <img src="../imagenes/v3.jpg" alt="" />
+                <p>
+                  NVIDIA trabaja junto con los fabricantes de paneles LCD para
+                  ofrecer la mayor variedad de paneles de alta velocidad al
+                  mercado: desde 75 Hz hasta 360 Hz.
+                </p>
+              </div>
+              <div class="col-4">
+                <img src="../imagenes/v4.jpg" alt="" />
+                <p>
+                  Los monitores avanzados G-SYNC ULTIMATE son compatibles con el
+                  gamut de color DCI-P3, que otorga una reproducción de color
+                  más realista y con tonalidades más fluidas.
+                </p>
+              </div>
+              <div class="col-4">
+                <img src="../imagenes/v5.jpg" alt="" />
+                <p>
+                  Obtén el tiempo de respuesta ultrarrápido característico de
+                  los monitores de impulso para ver objetos en movimiento
+                  increíblemente fluidos y cristalinos.
+                </p>
+              </div>
+              <div class="col-4">
+                <img src="../imagenes/v6.jpg" alt="" />
+                <p>
+                  Obtén la misma experiencia fluida y sin fragmentación en
+                  juegos 3D ya sea en modo ventana o en pantalla completa.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Compra -->
+        <section class="caracteristicas-5 text-center pb-5" id="comprarAhora">
+          <img
+            src="../imagenes/VENTA-LAPTOPS.png"
+            alt=""
+            style="width: 100%; height: 300px"
+          />
+          <h1 class="pt-5">SELECCIONA TU EQUIPO</h1>
+          <div
+            class="container row row-cols-1 row-cols-md-4 g-4 mx-auto"
+            id="contenedorMonitores"
+          ></div>
+        </section>
+      </div>
+
+      <!-- Carrito de Compras-->
+      <div
+        class="carritoCompras offcanvas offcanvas-end"
+        tabindex="-1"
+        id="offcanvasRight"
+        aria-labelledby="offcanvasRightLabel"
+      >
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasRightLabel">
+            Carrito de Compras
+          </h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+          >
+            <i class="fa-solid fa-xmark fa-xl"></i>
+          </button>
+        </div>
+        <div class="offcanvas-body carrito-contenedor" id="carrito-contenedor">
+          <table class="table text-center align-middle">
+            <thead>
+              <tr>
+                <th scope="col">Producto</th>
+                <th scope="col">Cantidad</th>
+                <th scope="col">Acción</th>
+                <th scope="col">Total</th>
+              </tr>
+            </thead>
+            <tbody id="pAgregados">
+              <th scope="row" colspan="4">
+                Carrito vacío - comience a comprar!
+              </th>
+            </tbody>
+            <tfoot id="footerCarrito"></tfoot>
+          </table>
+          <div class="botonesProcesar d-flex justify-content-around">
+            <button class="btn btn-danger btn-sm mt-2" id="vaciar-carrito">
+              Vaciar Carrito
+            </button>
+            <button class="btn btn-danger btn-sm mt-2" id="procesar-carrito">
+              Procesar Compra
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+      <section class="container footer-arriba d-flex pt-3">
+        <div class="infCorporativa">
+          <h2>Información Corporativa</h2>
+          <ul class="page-footer">
+            <li>
+              <a href="">Acerca de NVIDIA</a>
+            </li>
+            <li>
+              <a href="">Presentación Corporativa</a>
+            </li>
+            <li>
+              <a href="">Tecnologías</a>
+            </li>
+            <li>
+              <a href="">Investigación en NVIDIA</a>
+            </li>
+            <li>
+              <a href="">Inversionistas</a>
+            </li>
+            <li>
+              <a href="">Responsabilidad Social</a>
+            </li>
+            <li>
+              <a href="">Fundación NVIDIA</a>
+            </li>
+          </ul>
+        </div>
+        <div class="infCorporativa">
+          <h2>Información Corporativa</h2>
+          <ul class="page-footer">
+            <li>
+              <a href="">Foros</a>
+            </li>
+            <li>
+              <a href="">Carreras</a>
+            </li>
+            <li>
+              <a href="">Únase al Programa de Desarrolladores</a>
+            </li>
+            <li>
+              <a href="">Red de Socios de NVIDIA</a>
+            </li>
+            <li>
+              <a href="">NVIDIA Inception</a>
+            </li>
+            <li>
+              <a href="">Recursos para Capitalistas de Riesgo</a>
+            </li>
+            <li>
+              <a href="">Entrenamiento Técnico</a>
+            </li>
+            <li>
+              <a href="">Soluciones para TI de Empresas</a>
+            </li>
+            <li>
+              <a href="">Servicios Profesionales para Ciencia de Datos</a>
+            </li>
+          </ul>
+        </div>
+        <div class="infCorporativa">
+          <h2>Información Corporativa</h2>
+          <ul class="page-footer">
+            <li>
+              <a href="">Sala de Prensa</a>
+            </li>
+            <li>
+              <a href="">Blog de NVIDIA</a>
+            </li>
+            <li>
+              <a href="">Webinars</a>
+            </li>
+            <li>
+              <a href="">Mantente Informado</a>
+            </li>
+            <li>
+              <a href="">Calendario de Eventos</a>
+            </li>
+            <li>
+              <a href="">NVIDIA GTC</a>
+            </li>
+            <li>
+              <a href="">NVIDIA On-Demand</a>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="container footer-abajo d-flex justify-content-between">
+        <div class="footerIzquierda d-flex align-items-center">
+          <div class="izquierdaf">
+            <i class="fa-regular fa-envelope fa-3x"></i>
+          </div>
+          <div class="izquierdaf">
+            <span>REGÍSTRESE PARA LAS NOTICIAS DE NVIDIA</span>
+          </div>
+          <div class="izquierdaf">
+            <button type="button" class="btn btn-secondary">REGÍSTRATE</button>
+          </div>
+        </div>
+        <div class="footerDerecha d-flex align-items-center">
+          <div class="derechaf">
+            <h6>Sigue a NVIDIA</h6>
+          </div>
+          <div class="derechaf">
+            <i class="fa-brands fa-facebook-f fa-3x"></i>
+          </div>
+          <div class="derechaf">
+            <i class="fa-brands fa-twitter fa-3x"></i>
+          </div>
+          <div class="derechaf">
+            <i class="fa-brands fa-linkedin-in fa-3x"></i>
+          </div>
+          <div class="derechaf">
+            <i class="fa-brands fa-instagram fa-3x"></i>
+          </div>
+          <div class="derechaf">
+            <i class="fa-brands fa-youtube fa-3x"></i>
+          </div>
+        </div>
+      </section>
+    </footer>
+
+    <!-- Template Body Carrito -->
+    <template id="template-carrito">
+      <tr>
+        <td>
+          <img
+            src=""
+            class="card-img-top"
+            alt="..."
+            style="width: 60px; height: 50px"
+          />
+        </td>
+        <td>Cantidad</td>
+        <td>
+          <button class="incrementar"><i class="fa-solid fa-plus"></i></button>
+          <button class="decrementar"><i class="fa-solid fa-minus"></i></button>
+          <button class="eliminar"><i class="fa-solid fa-trash fa-2xs"></i></button>
+        </td>
+        <td>Total</td>
+      </tr>
+    </template>
+
+    <!-- Template Body Carrito -->
+    <template id="template-carrito2">
+      <tr>
+        <td>
+          <img
+            src=""
+            class="card-img-top"
+            alt="..."
+            style="width: 60px; height: 50px"
+          />
+        </td>
+        <td></td>
+        <td>1</td>
+        <td>
+          <button class="incrementar"><i class="fa-solid fa-plus"></i></button>
+          <button class="decrementar"><i class="fa-solid fa-minus"></i></button>
+        </td>
+        <td></td>
+      </tr>
+    </template>
+
+    <!-- Template Footer Carrito -->
+    <template id="templateFooterCarrito">
+      <th class="pt-2" scope="row">Total:</th>
+      <th class="pt-2">Cantidad</th>
+      <th></th>
+      <th>Precio-Total</th>
+    </template>
+
+    <!-- Template Contador Carrito -->
+    <template id="templateContador">
+      <button
+        id="open"
+        class="nav-link text-body btn btn-primary"
+        type="button"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasRight"
+        aria-controls="offcanvasRight"
+      >
+        <i class="bi bi-cart fa-lg"></i><span id="contador-carrito">0</span>
+      </button>
+    </template>
+
+  </body>
+</html>

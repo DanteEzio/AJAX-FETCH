@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inicio | nvidia</title>
+
+    <!-- LOGO PÁGINA -->
+    <link
+      class="icono-principal"
+      rel="shortcut icon"
+      href="imagenes/LogoNvidiaPagina.png"
+      type="image/x-icon"
+      width="16px"
+      height="16px"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/main.css" />
+
+    <!-- Bootstrap - CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+
+    <!-- Bootstrap - JavaScript -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Bootstrap - Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css"
+    />
+
+    <!-- Font-Awesome -->
+    <script
+      src="https://kit.fontawesome.com/c98c29ff31.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- SweetAlert -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- Código JavaScript "IMPORTANTE PONER DEFER" -->
+    <script defer src="app.js"></script>
+
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="sticky-top">
+      <nav class="navbar navbar-expand-lg bg-light sticky-top">
+        <div class="container">
+          <!-- Logo -->
+          <a class="navbar-brand" href="index.html">
+            <img src="imagenes/Nvidia-Horizontal-Logo.wine.svg" alt="" />
+          </a>
+          <!-- Pestañas -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="offcanvas offcanvas-end"
+            tabindex="-1"
+            id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel"
+          >
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+                Offcanvas
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="offcanvas-body">
+              <!-- Pestañas izquierda -->
+              <ul
+                class="navbar-nav justify-content-start flex-grow-1 pe-3 py-1"
+              >
+                <li class="nav-item">
+                  <a
+                    class="nav-link"
+                    aria-current="page"
+                    href="Laptops/laptops.html"
+                    >Laptops</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="tGraficas/tGraficas.html"
+                    >Tarjetas Gráficas</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="monitores/monitores.html"
+                    >Monitores G-SYNC</a
+                  >
+                </li>
+              </ul>
+              <!-- Pestañas derecha -->
+              <ul
+                class="navbar-nav navbar-adicional justify-content-end flex-grow-1 pe-1 py-2"
+              >
+                <li class="nav-item">
+                  <a class="nav-link" href="#">DRIVERS</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">SOPORTE</a>
+                </li>
+              </ul>
+              <!-- Iconos -->
+              <ul class="navbar-nav navbar-icons flex-row flex-wrap pt-1">
+                <li class="nav-item">
+                  <a class="nav-link" href=""
+                    ><i class="bi bi-search fa-lg"></i
+                  ></a>
+                </li>
+                <!-- Carrito de Compras -->
+                <li class="nav-item" id="contadorCar">
+                  <button
+                    id="open"
+                    class="nav-link text-body btn btn-primary"
+                    type="button"
+                    data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasRight"
+                    aria-controls="offcanvasRight"
+                  >
+                    <i class="bi bi-cart fa-lg"></i
+                    ><span id="contador-carrito">0</span>
+                  </button>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href=""
+                    ><i class="bi bi-person-circle fa-lg"></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- MAIN -->
+    <main>
+      <!-- Carousel -->
+      <section class="carousel-inicio">
+        <div
+          id="carouselExampleCaptions"
+          class="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+          </div>
+          <div class="carousel-inner">
+            <div
+              class="carousel-item active carousel-imagen-1"
+              data-bs-interval="10000"
+              style="
+                background-image: url('imagenes/carousel-1.jpg');
+                height: 650px;
+              "
+            >
+              <div class="carousel-caption d-none d-md-block">
+                <h1>Laptops GeForce RTX Serie 30</h1>
+                <h2>LA JUGADA DEFINITIVA</h2>
+                <p>
+                  Las Tarjetas Gráficas NVIDIA® GeForce RTX™ Serie 30 para
+                  Laptops potencian las laptops más rápidas del mundo para los
+                  jugadores y los creadores. Se construyeron con Ampere, la
+                  arquitectura RTX de 2.º generación de NVIDIA, para brindarte
+                  los gráficos con ray tracing más realistas y las funciones de
+                  IA de vanguardia, como NVIDIA DLSS. Además, las Tecnologías
+                  Max-Q liberan la potencia de la IA para crear laptops delgadas
+                  y de alto rendimiento, que son más rápidas y mejores que
+                  nunca.
+                </p>
+                <button type="button" class="btn btn-secondary text-start">
+                  COMPRAR
+                </button>
+              </div>
+            </div>
+            <div
+              class="carousel-item carousel-imagen-2"
+              data-bs-interval="10000"
+              style="
+                background-image: url('imagenes/carousel-2.jpg');
+                height: 650px;
+              "
+            >
+              <div class="carousel-caption d-none d-md-block">
+                <h1>GeForce RTX Series 30</h1>
+                <h2>LA JUGADA DEFINITIVA</h2>
+                <p>
+                  Las GPUs GeForce RTX™ Serie 30 proporcionan el rendimiento
+                  definitivo para los jugadores y los creadores. Cuentan con la
+                  tecnología Ampere, con la arquitectura de RTX de 2.ª
+                  generación de NVIDIA, con nuevos Núcleos RT, Núcleos Tensor y
+                  multiprocesadores de transmisión para potenciar los gráficos
+                  con ray tracing más realistas y las funciones de IA de
+                  vanguardia.
+                </p>
+                <button type="button" class="btn btn-secondary text-start">
+                  COMPRAR
+                </button>
+              </div>
+            </div>
+            <div
+              class="carousel-item carousel-imagen-3"
+              style="
+                background-image: url('imagenes/carousel-4.jpg');
+                height: 650px;
+              "
+            >
+              <div class="carousel-caption d-none d-md-block">
+                <img src="imagenes/geforce-g-sync-logo.svg" alt="" />
+                <h1>Diseñados para los Juegos</h1>
+                <p>
+                  Ya usas la tecnología GeForce® para disfrutar de los juegos
+                  más intensos, realistas y cautivantes. ¿Por qué no disfrutar
+                  de lo mismo en tu pantalla para juegos?
+                  <br />
+                  <br />
+                  Las pantallas NVIDIA® G-SYNC® se prueban rigurosamente para
+                  cumplir con los más altos estándares. Inmersión perfecta y sin
+                  fragmentaciones. Tecnología revolucionaria. Con las tasas de
+                  actualización más altas para brindar un rendimiento
+                  insuperable. En cada juego. Siempre. En cualquier lugar.
+                </p>
+                <button type="button" class="btn btn-secondary text-start">
+                  COMPRAR
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button> -->
+        </div>
+      </section>
+
+      <!-- Cards -->
+      <section class="tarjetas-gaming pb-5">
+        <h1 class="text-center">GAMING</h1>
+        <div class="container gaming row row-cols-1 row-cols-md-4 g-4 mx-auto">
+          <div class="col">
+            <div class="card">
+              <a href="">
+                <img
+                  src="imagenes/nvidia-geforce-news-announcements-from-computex-2022-ogimage.jpg"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Novedades Geforce RTX</h5>
+                  <p class="card-text">Desde COMPUTEX 2022.</p>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <a href="">
+                <img
+                  src="imagenes/Icarus-Nvidia.jpg"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Frames Win Games</h5>
+                  <p class="card-text">NVIDIA Reflex Próximamente.</p>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <a href="">
+                <img
+                  src="imagenes/rtx-announcements.jpg"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title">RTX. It's On.</h5>
+                  <p class="card-text">
+                    Ray Tracing Y NVIDIA DLSS Llegando A Tus Juegos Favoritos.
+                  </p>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <a href="">
+                <img
+                  src="imagenes/geforce-rtx-grd-nv-sfg.jpg"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Drivers Game Ready</h5>
+                  <p class="card-text">
+                    Aprende Como Obtener La Mejor Experiencia De Juego
+                  </p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <h1 class="text-center">ÚLTIMAS NOTICIAS</h1>
+        <div
+          class="container gaming row row-cols-1 row-cols-md-4 g-4 mx-auto"
+          id="contenedorCards"
+        >
+          <div class="col">
+            <div class="card tarjeta-index">
+              <a href="">
+                <img
+                  src="imagenes/FABRICA-BMW.jpg"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title">
+                    Desbloqueando el Siguiente Nivel de Digital Twins
+                  </h5>
+                  <p class="card-text">
+                    Descubra cómo BMW Group y NVIDIA Omniverse utilizan la
+                    potencia de la supercomputación para liderar la simulación
+                    del mundo virtual.
+                  </p>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card tarjeta-index">
+              <a href="">
+                <img
+                  src="imagenes/hpc-promo-package.jpg"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title">
+                    El Camino hacia la Cuántica Híbrida
+                  </h5>
+                  <p class="card-text">
+                    Docenas de organizaciones cuánticas están aprovechando
+                    NVIDIA cuQuantum para acelerar las simulaciones de control
+                    de calidad en las GPU, allanando el camino para construir
+                    los sistemas cuánticos híbridos del futuro.
+                  </p>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card tarjeta-index">
+              <a href="">
+                <img
+                  src="imagenes/gtc22-Morpheus-Cybersecurity.jpg"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title">
+                    NVIDIA Morpheus Cybersecurity Framework ya está disponible
+                  </h5>
+                  <p class="card-text">
+                    Descargue NVIDIA Morpheus hoy mismo y cree una
+                    ciberseguridad más fuerte y rápida con IA.
+                  </p>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card tarjeta-index">
+              <a href="">
+                <img
+                  src="imagenes/gtc22-spring-hpc-modulus.jpg"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title">
+                    Plataforma de Digital Twin para Computación Cientifíca
+                  </h5>
+                  <p class="card-text">
+                    Usando NVIDIA Modulus con IA basada en física y NVIDIA
+                    Omniverse, la ciencia y la ingeniería pueden avanzar más
+                    rápido que nunca.
+                  </p>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card tarjeta-index">
+              <a href="">
+                <img
+                  src="imagenes/nvidia-dgx-h100-sfg-295-166-dtm@2x.jpg"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title">
+                    Presentamos NVIDIA DGX H100, la infraestructura de IA
+                    Empresarial Más Avanzada del Mundo
+                  </h5>
+                  <p class="card-text">
+                    Presentado en GTC 2022, el sistema NVIDIA DGX de cuarta
+                    generación es la primera plataforma de IA del mundo que se
+                    construye con las nuevas GPU NVIDIA H100 Tensor Core.
+                  </p>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card tarjeta-index">
+              <a href="">
+                <img
+                  src="imagenes/gtc22-Networking-Announcement-Spectrum4-sfg-295x166-dtm@2x.jpg"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title">
+                    La plataforma NVIDIA Spectrum-4 Potencia la IA Empresarial y
+                    los Data Centers en el cloud
+                  </h5>
+                  <p class="card-text">
+                    La plataforma NVIDIA Spectrum de próxima generación
+                    aprovecha las estructuras Ethernet Spectrum-4 para ofrecer
+                    el mayor rendimiento y la latencia más baja al tiempo que
+                    reduce el espacio de la red.
+                  </p>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card tarjeta-index">
+              <a href="">
+                <img
+                  src="imagenes/ngc-gtc-corp-blog-promo-google-cloud-blog-1280x680-1.jpg"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title">
+                    NVIDIA y Google Cloud Ayudan a las Empresas a Desarrollar IA
+                    Más Rápido
+                  </h5>
+                  <p class="card-text">
+                    La nueva función One Click Deploy de NVIDIA NGC, que acelera
+                    el proceso de creación de IA de última generación,
+                    simplifica los complejos pasos de ejecución de un Jupyter
+                    Notebook en Google Cloud Vertex AI a un solo clic.
+                  </p>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card tarjeta-index">
+              <a href="">
+                <img
+                  src="imagenes/ibm-quantum-interior.jpeg"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title">
+                    Accesos a la Computación Cuántica Híbrida
+                  </h5>
+                  <p class="card-text">
+                    NVIDIA cuQuantum ahora está disponible para el público
+                    general, junto con un ecosistema de computación cuántica en
+                    expansión y colaboraciones para cnstruir los sistemas más
+                    poderosos del mañana.
+                  </p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Carrito de Compras-->
+      <div
+        class="carritoCompras offcanvas offcanvas-end"
+        tabindex="-1"
+        id="offcanvasRight"
+        aria-labelledby="offcanvasRightLabel"
+      >
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasRightLabel">
+            Carrito de Compras
+          </h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+          >
+            <i class="fa-solid fa-xmark fa-xl"></i>
+          </button>
+        </div>
+        <div class="offcanvas-body carrito-contenedor" id="carrito-contenedor">
+          <table class="table text-center align-middle">
+            <thead>
+              <tr>
+                <th scope="col">Producto</th>
+                <th scope="col">Cantidad</th>
+                <th scope="col">Acción</th>
+                <th scope="col">Total</th>
+              </tr>
+            </thead>
+            <tbody id="pAgregados">
+              <th scope="row" colspan="4">
+                Carrito vacío - comience a comprar!
+              </th>
+            </tbody>
+            <tfoot id="footerCarrito"></tfoot>
+          </table>
+          <div class="botonesProcesar d-flex justify-content-around">
+            <button class="btn btn-danger btn-sm mt-2" id="vaciar-carrito">
+              Vaciar Carrito
+            </button>
+            <button class="btn btn-danger btn-sm mt-2" id="procesar-carrito">
+              Procesar Compra
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <section class="container footer-arriba d-flex pt-3">
+        <div class="infCorporativa">
+          <h2>Información Corporativa</h2>
+          <ul class="page-footer">
+            <li>
+              <a href="">Acerca de NVIDIA</a>
+            </li>
+            <li>
+              <a href="">Presentación Corporativa</a>
+            </li>
+            <li>
+              <a href="">Tecnologías</a>
+            </li>
+            <li>
+              <a href="">Investigación en NVIDIA</a>
+            </li>
+            <li>
+              <a href="">Inversionistas</a>
+            </li>
+            <li>
+              <a href="">Responsabilidad Social</a>
+            </li>
+            <li>
+              <a href="">Fundación NVIDIA</a>
+            </li>
+          </ul>
+        </div>
+        <div class="infCorporativa">
+          <h2>Información Corporativa</h2>
+          <ul class="page-footer">
+            <li>
+              <a href="">Foros</a>
+            </li>
+            <li>
+              <a href="">Carreras</a>
+            </li>
+            <li>
+              <a href="">Únase al Programa de Desarrolladores</a>
+            </li>
+            <li>
+              <a href="">Red de Socios de NVIDIA</a>
+            </li>
+            <li>
+              <a href="">NVIDIA Inception</a>
+            </li>
+            <li>
+              <a href="">Recursos para Capitalistas de Riesgo</a>
+            </li>
+            <li>
+              <a href="">Entrenamiento Técnico</a>
+            </li>
+            <li>
+              <a href="">Soluciones para TI de Empresas</a>
+            </li>
+            <li>
+              <a href="">Servicios Profesionales para Ciencia de Datos</a>
+            </li>
+          </ul>
+        </div>
+        <div class="infCorporativa">
+          <h2>Información Corporativa</h2>
+          <ul class="page-footer">
+            <li>
+              <a href="">Sala de Prensa</a>
+            </li>
+            <li>
+              <a href="">Blog de NVIDIA</a>
+            </li>
+            <li>
+              <a href="">Webinars</a>
+            </li>
+            <li>
+              <a href="">Mantente Informado</a>
+            </li>
+            <li>
+              <a href="">Calendario de Eventos</a>
+            </li>
+            <li>
+              <a href="">NVIDIA GTC</a>
+            </li>
+            <li>
+              <a href="">NVIDIA On-Demand</a>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="container footer-abajo d-flex justify-content-between">
+        <div class="footerIzquierda d-flex align-items-center">
+          <div class="izquierdaf">
+            <i class="fa-regular fa-envelope fa-3x"></i>
+          </div>
+          <div class="izquierdaf">
+            <span>REGÍSTRESE PARA LAS NOTICIAS DE NVIDIA</span>
+          </div>
+          <div class="izquierdaf">
+            <button type="button" class="btn btn-secondary">REGÍSTRATE</button>
+          </div>
+        </div>
+        <div class="footerDerecha d-flex align-items-center">
+          <div class="derechaf">
+            <h6>Sigue a NVIDIA</h6>
+          </div>
+          <div class="derechaf">
+            <i class="fa-brands fa-facebook-f fa-3x"></i>
+          </div>
+          <div class="derechaf">
+            <i class="fa-brands fa-twitter fa-3x"></i>
+          </div>
+          <div class="derechaf">
+            <i class="fa-brands fa-linkedin-in fa-3x"></i>
+          </div>
+          <div class="derechaf">
+            <i class="fa-brands fa-instagram fa-3x"></i>
+          </div>
+          <div class="derechaf">
+            <i class="fa-brands fa-youtube fa-3x"></i>
+          </div>
+        </div>
+      </section>
+    </footer>
+
+    <!-- Template Body Carrito -->
+    <template id="template-carrito">
+      <tr>
+        <td>
+          <img
+            src=""
+            class="card-img-top"
+            alt="..."
+            style="width: 60px; height: 50px"
+          />
+        </td>
+        <td>Cantidad</td>
+        <td>
+          <button class="incrementar"><i class="fa-solid fa-plus"></i></button>
+          <button class="decrementar"><i class="fa-solid fa-minus"></i></button>
+          <button class="eliminar">
+            <i class="fa-solid fa-trash fa-2xs"></i>
+          </button>
+        </td>
+        <td>Total</td>
+      </tr>
+    </template>
+
+    <!-- Template Body Carrito -->
+    <template id="template-carrito2">
+      <tr>
+        <td>
+          <img
+            src=""
+            class="card-img-top"
+            alt="..."
+            style="width: 60px; height: 50px"
+          />
+        </td>
+        <td></td>
+        <td>1</td>
+        <td>
+          <button class="incrementar"><i class="fa-solid fa-plus"></i></button>
+          <button class="decrementar"><i class="fa-solid fa-minus"></i></button>
+        </td>
+        <td></td>
+      </tr>
+    </template>
+
+    <!-- Template Footer Carrito -->
+    <template id="templateFooterCarrito">
+      <th class="pt-2" scope="row">Total:</th>
+      <th class="pt-2">Cantidad</th>
+      <th></th>
+      <th>Precio-Total</th>
+    </template>
+
+    <!-- Template Contador Carrito -->
+    <template id="templateContador">
+      <button
+        id="open"
+        class="nav-link text-body btn btn-primary"
+        type="button"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasRight"
+        aria-controls="offcanvasRight"
+      >
+        <i class="bi bi-cart fa-lg"></i><span id="contador-carrito">0</span>
+      </button>
+    </template>
+
+  </body>
+</html>

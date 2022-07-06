@@ -1,0 +1,1702 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "Go Medium";
+  src: url("//db.onlinewebfonts.com/t/047f4505be97c463bc637f1767d274d6.eot");
+  src: url("//db.onlinewebfonts.com/t/047f4505be97c463bc637f1767d274d6.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/047f4505be97c463bc637f1767d274d6.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/047f4505be97c463bc637f1767d274d6.woff") format("woff"), url("//db.onlinewebfonts.com/t/047f4505be97c463bc637f1767d274d6.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/047f4505be97c463bc637f1767d274d6.svg#Go Medium") format("svg");
+}
+@font-face {
+  font-family: "GeForce-Regular";
+  src: url("//db.onlinewebfonts.com/t/7c842801a63c2d8d75278221b6723214.eot");
+  src: url("//db.onlinewebfonts.com/t/7c842801a63c2d8d75278221b6723214.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/7c842801a63c2d8d75278221b6723214.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/7c842801a63c2d8d75278221b6723214.woff") format("woff"), url("//db.onlinewebfonts.com/t/7c842801a63c2d8d75278221b6723214.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/7c842801a63c2d8d75278221b6723214.svg#GeForce") format("svg");
+}
+@font-face {
+  font-family: "GeForce-Bold";
+  src: url("//db.onlinewebfonts.com/t/cf67b63a12a22d6fe21be02b8dfdf060.eot");
+  src: url("//db.onlinewebfonts.com/t/cf67b63a12a22d6fe21be02b8dfdf060.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/cf67b63a12a22d6fe21be02b8dfdf060.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/cf67b63a12a22d6fe21be02b8dfdf060.woff") format("woff"), url("//db.onlinewebfonts.com/t/cf67b63a12a22d6fe21be02b8dfdf060.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/cf67b63a12a22d6fe21be02b8dfdf060.svg#GeForce") format("svg");
+}
+@font-face {
+  font-family: "DINPro-Light";
+  src: url("//db.onlinewebfonts.com/t/e0be9bd5e372b2c379893b776e7b2b96.eot");
+  src: url("//db.onlinewebfonts.com/t/e0be9bd5e372b2c379893b776e7b2b96.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/e0be9bd5e372b2c379893b776e7b2b96.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/e0be9bd5e372b2c379893b776e7b2b96.woff") format("woff"), url("//db.onlinewebfonts.com/t/e0be9bd5e372b2c379893b776e7b2b96.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/e0be9bd5e372b2c379893b776e7b2b96.svg#DINPro-Light") format("svg");
+}
+@font-face {
+  font-family: "DINPro-Regular";
+  src: url("//db.onlinewebfonts.com/t/c9c60c88cb732119e5a9457f2d9cdc53.eot");
+  src: url("//db.onlinewebfonts.com/t/c9c60c88cb732119e5a9457f2d9cdc53.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/c9c60c88cb732119e5a9457f2d9cdc53.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/c9c60c88cb732119e5a9457f2d9cdc53.woff") format("woff"), url("//db.onlinewebfonts.com/t/c9c60c88cb732119e5a9457f2d9cdc53.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/c9c60c88cb732119e5a9457f2d9cdc53.svg#DINPro-Regular") format("svg");
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+
+header .navbar {
+  height: 44px;
+}
+header .navbar .container .navbar-brand img {
+  width: 140px;
+}
+header .navbar .container .offcanvas .offcanvas-body .navbar-nav .nav-item a {
+  font-size: 16px;
+  font-family: "Go Medium";
+  font-weight: normal;
+}
+header .navbar .container .offcanvas .offcanvas-body .navbar-nav .nav-item button {
+  background: none;
+  border: none;
+  color: rgba(0, 0, 0, 0.55) !important;
+}
+header .navbar .container .offcanvas .offcanvas-body .navbar-nav .nav-item button:hover {
+  color: rgba(0, 0, 0, 0.7) !important;
+}
+header .navbar .container .offcanvas .offcanvas-body .navbar-nav .nav-item button #contador-carrito {
+  font-weight: bold;
+  font-size: 11px;
+  width: 15px;
+  height: 15px;
+  border-radius: 1em;
+  font-family: "Go Medium";
+  background-color: #76b900;
+  color: #eee;
+  position: absolute;
+  margin-left: -17px;
+  margin-top: -2px;
+}
+header .navbar .container .offcanvas .offcanvas-body .navbar-adicional .nav-item a {
+  font-size: 13px;
+  font-family: "Go Medium";
+}
+header .navbar-dos {
+  height: 70px;
+  background-color: #1a1a1a;
+  opacity: 0.9;
+  overflow: hidden;
+}
+header .navbar-dos .container .offcanvas .offcanvas-body .navbar-nav .nav-item a {
+  font-size: 16px;
+  font-family: "DINPro-Light";
+  font-weight: 600;
+  color: #eee;
+}
+header .navbar-dos .container .offcanvas .offcanvas-body .navbar-adicional .nav-item {
+  padding-left: 10px;
+}
+header .navbar-dos .container .offcanvas .offcanvas-body .navbar-adicional .nav-item a {
+  font-size: 14px;
+  font-family: "DINPro-Regular";
+  font-weight: normal;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+header .navbar-dos .container .offcanvas .offcanvas-body .navbar-adicional .nav-item .linkComprar {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: "DINPro-Light";
+  background-color: #76b900;
+  border-color: #76b900;
+  border-radius: 0;
+  display: flex;
+  justify-content: flex-start;
+  font-size: 14px;
+  color: #eee;
+}
+header .navbar-dos .container .offcanvas .offcanvas-body .navbar-adicional .nav-item .linkComprar:hover {
+  background-color: #86d103;
+}
+
+main {
+  background-color: #eee;
+}
+main .carousel-inicio .carousel .carousel-inner .carousel-imagen-1 {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 46% 0px;
+}
+main .carousel-inicio .carousel .carousel-inner .carousel-imagen-1 .carousel-caption {
+  width: 550px;
+}
+main .carousel-inicio .carousel .carousel-inner .carousel-imagen-1 .carousel-caption h1 {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 60px;
+  line-height: 1em;
+  font-family: "GeForce-Bold";
+  color: #76b900;
+  text-align: left;
+  align-items: center;
+  word-wrap: break-word;
+  margin-left: -100px;
+}
+main .carousel-inicio .carousel .carousel-inner .carousel-imagen-1 .carousel-caption h2 {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 36px;
+  line-height: 1em;
+  font-family: "GeForce-Bold";
+  color: #fff;
+  text-align: left;
+  word-wrap: break-word;
+  margin-left: -100px;
+}
+main .carousel-inicio .carousel .carousel-inner .carousel-imagen-1 .carousel-caption p {
+  padding: 10px 0;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: "DINPro-Light";
+  color: #fff;
+  text-align: left;
+  word-wrap: break-word;
+  margin-left: -100px;
+}
+main .carousel-inicio .carousel .carousel-inner .carousel-imagen-1 .carousel-caption button {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: "DINPro-Light";
+  background-color: #76b900;
+  border-color: #76b900;
+  border-radius: 0;
+  display: flex;
+  justify-content: flex-start;
+  margin-left: -100px;
+  margin-bottom: 80px;
+}
+main .carousel-inicio .carousel .carousel-inner .carousel-imagen-1 .carousel-caption button:hover {
+  background-color: #86d103;
+}
+main .carousel-inicio .carousel .carousel-inner .carousel-imagen-1 .carousel-caption img {
+  width: 200px;
+  display: flex;
+  padding-bottom: 20px;
+}
+main .carousel-inicio .carousel .carousel-inner .carousel-imagen-2 {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 35% 0px;
+}
+main .carousel-inicio .carousel .carousel-inner .carousel-imagen-2 .carousel-caption {
+  width: 560px;
+}
+main .carousel-inicio .carousel .carousel-inner .carousel-imagen-2 .carousel-caption h1 {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 56px;
+  line-height: 1em;
+  font-family: "GeForce-Bold";
+  color: #76b900;
+  text-align: left;
+  align-items: center;
+  word-wrap: break-word;
+  margin-left: -100px;
+}
+main .carousel-inicio .carousel .carousel-inner .carousel-imagen-2 .carousel-caption h2 {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 32px;
+  line-height: 1em;
+  font-family: "GeForce-Bold";
+  color: #fff;
+  text-align: left;
+  word-wrap: break-word;
+  margin-left: -100px;
+}
+main .carousel-inicio .carousel .carousel-inner .carousel-imagen-2 .carousel-caption p {
+  padding: 10px 0;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: "DINPro-Light";
+  color: #fff;
+  text-align: left;
+  word-wrap: break-word;
+  margin-left: -100px;
+}
+main .carousel-inicio .carousel .carousel-inner .carousel-imagen-2 .carousel-caption button {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: "DINPro-Light";
+  background-color: #76b900;
+  border-color: #76b900;
+  border-radius: 0;
+  display: flex;
+  justify-content: flex-start;
+  margin-left: -100px;
+  margin-bottom: 120px;
+}
+main .carousel-inicio .carousel .carousel-inner .carousel-imagen-2 .carousel-caption button:hover {
+  background-color: #86d103;
+}
+main .carousel-inicio .carousel .carousel-inner .carousel-imagen-3 {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 35% 0px;
+}
+main .carousel-inicio .carousel .carousel-inner .carousel-imagen-3 .carousel-caption {
+  width: 550px;
+}
+main .carousel-inicio .carousel .carousel-inner .carousel-imagen-3 .carousel-caption h1 {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 60px;
+  line-height: 1em;
+  font-family: "GeForce-Bold";
+  color: #76b900;
+  text-align: left;
+  align-items: center;
+  word-wrap: break-word;
+  margin-left: -100px;
+}
+main .carousel-inicio .carousel .carousel-inner .carousel-imagen-3 .carousel-caption p {
+  padding: 10px 0;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: "DINPro-Light";
+  color: #fff;
+  text-align: left;
+  word-wrap: break-word;
+  margin-left: -100px;
+}
+main .carousel-inicio .carousel .carousel-inner .carousel-imagen-3 .carousel-caption button {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: "DINPro-Light";
+  background-color: #76b900;
+  border-color: #76b900;
+  border-radius: 0;
+  display: flex;
+  justify-content: flex-start;
+  margin-left: -100px;
+  margin-bottom: 35px;
+}
+main .carousel-inicio .carousel .carousel-inner .carousel-imagen-3 .carousel-caption button:hover {
+  background-color: #86d103;
+}
+main .carousel-inicio .carousel .carousel-inner .carousel-imagen-3 .carousel-caption img {
+  width: 200px;
+  display: flex;
+  padding-bottom: 20px;
+  margin-left: -100px;
+}
+main .tarjetas-gaming h1 {
+  color: #76b900;
+  font-family: "GeForce-Regular";
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+main .tarjetas-gaming .gaming .col .card {
+  height: 100%;
+  border: none;
+  box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.19), 0 2px 6px 0 rgba(0, 0, 0, 0.19);
+}
+main .tarjetas-gaming .gaming .col .card a {
+  text-decoration: none;
+}
+main .tarjetas-gaming .gaming .col .card a img {
+  height: 166px;
+}
+main .tarjetas-gaming .gaming .col .card a .card-body .card-title {
+  font-weight: bold;
+  color: #76b900;
+  font-family: "DINPro-Light";
+  font-size: 18px;
+}
+main .tarjetas-gaming .gaming .col .card a .card-body p {
+  font-size: 14px;
+  line-height: 1.5em;
+  color: #1a1a1a;
+  font-family: "DINPro-Regular";
+}
+main .tarjetas-gaming .gaming .col .card:hover {
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.19), 0 2px 6px 0 rgba(0, 0, 0, 0.19);
+}
+main .laptops .foto-principal {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 46% 0px;
+}
+main .laptops .foto-principal .card .card-img-overlay {
+  width: 680px;
+  padding-top: 145px;
+}
+main .laptops .foto-principal .card .card-img-overlay h1 {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 60px;
+  line-height: 1em;
+  font-family: "GeForce-Bold";
+  color: #76b900;
+  text-align: left;
+  align-items: center;
+  word-wrap: break-word;
+  padding-top: 80px;
+}
+main .laptops .foto-principal .card .card-img-overlay h2 {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 36px;
+  line-height: 1em;
+  font-family: "GeForce-Bold";
+  color: #fff;
+  text-align: left;
+  word-wrap: break-word;
+}
+main .laptops .foto-principal .card .card-img-overlay p {
+  padding: 10px 0;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: "DINPro-Light";
+  color: #fff;
+  text-align: left;
+  word-wrap: break-word;
+}
+main .laptops .video-caracteristicas {
+  position: relative;
+  overflow: hidden;
+  padding: 30px;
+}
+main .laptops .video-caracteristicas video {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  z-index: 0;
+}
+main .laptops .video-caracteristicas h1 {
+  position: relative;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 48px;
+  line-height: 1em;
+  font-family: "GeForce-Bold";
+  color: #fff;
+  padding-bottom: 20px;
+}
+main .laptops .video-caracteristicas .detalles-laptops .col .card {
+  background: none;
+  border: none;
+  height: 100%;
+}
+main .laptops .video-caracteristicas .detalles-laptops .col .card img {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto;
+}
+main .laptops .video-caracteristicas .detalles-laptops .col .card h5 {
+  width: 90%;
+  margin: 0 auto;
+  text-transform: uppercase;
+  font-size: 20px;
+  line-height: 18px;
+  font-family: "GeForce-Bold";
+  color: #fff;
+  padding: 10px;
+}
+main .laptops .video-caracteristicas .detalles-laptops .col .card p {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: "DINPro-Light";
+  color: #fff;
+}
+main .laptops .caracteristicas-1 {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+main .laptops .caracteristicas-1 .card .card-img-overlay h1 {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 48px;
+  line-height: 1em;
+  font-family: "GeForce-Bold";
+  color: #fff;
+  word-wrap: break-word;
+  padding-top: 30px;
+}
+main .laptops .caracteristicas-1 .card .card-img-overlay h2 {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 36px;
+  line-height: 1em;
+  font-family: "GeForce-Bold";
+  color: #76b900;
+  align-items: center;
+  word-wrap: break-word;
+}
+main .laptops .caracteristicas-1 .card .card-img-overlay p {
+  padding-top: 15px;
+  padding-bottom: 20px;
+  width: 70%;
+  margin: 0 auto;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: "DINPro-Light";
+  color: #fff;
+  align-items: center;
+  word-wrap: break-word;
+}
+main .laptops .caracteristicas-1 .card .card-img-overlay p span {
+  color: #76b900;
+}
+main .laptops .caracteristicas-1 .card .card-img-overlay a {
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: "DINPro-Light";
+  color: #76b900;
+  align-items: center;
+  word-wrap: break-word;
+}
+main .laptops .caracteristicas-2 {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+main .laptops .caracteristicas-2 .card .card-img-overlay h1 {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 48px;
+  line-height: 1em;
+  font-family: "GeForce-Bold";
+  color: #fff;
+  word-wrap: break-word;
+  padding-top: 30px;
+}
+main .laptops .caracteristicas-2 .card .card-img-overlay h2 {
+  padding-top: 5px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 24px;
+  line-height: 1em;
+  font-family: "GeForce-Bold";
+  color: #fff;
+  align-items: center;
+  word-wrap: break-word;
+}
+main .laptops .caracteristicas-2 .card .card-img-overlay p {
+  padding-top: 15px;
+  padding-bottom: 20px;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: "DINPro-Light";
+  color: #fff;
+  align-items: center;
+  word-wrap: break-word;
+}
+main .laptops .caracteristicas-2 .card .card-img-overlay a {
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: "DINPro-Light";
+  color: #76b900;
+  align-items: center;
+  word-wrap: break-word;
+}
+main .laptops .caracteristicas-2 .card .card-img-overlay button {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: "DINPro-Light";
+  background-color: #76b900;
+  border-color: #76b900;
+  border-radius: 0;
+  padding: 14px;
+  font-size: 18px;
+}
+main .laptops .caracteristicas-2 .card .card-img-overlay button:hover {
+  background-color: #86d103;
+}
+main .laptops .caracteristicas-3 {
+  background-color: #000;
+  padding: 50px;
+}
+main .laptops .caracteristicas-3 h1 {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 48px;
+  line-height: 1em;
+  font-family: "GeForce-Bold";
+  color: #fff;
+  word-wrap: break-word;
+}
+main .laptops .caracteristicas-3 .table-responsive {
+  padding: 40px;
+}
+main .laptops .caracteristicas-3 .table-responsive table thead tr th {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 1em;
+  font-family: "GeForce-Bold";
+  color: #76b900;
+  text-align: center;
+  word-wrap: break-word;
+  box-sizing: border-box;
+  padding-bottom: 15px;
+}
+main .laptops .caracteristicas-3 .table-responsive table tbody tr th {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.25em;
+  font-family: "DINPro-Light";
+  color: #fff;
+  word-wrap: break-word;
+  box-sizing: border-box;
+  padding: 30px 0px;
+  min-width: 158px;
+  text-align: left;
+}
+main .laptops .caracteristicas-3 .table-responsive table tbody tr td {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.25em;
+  font-family: "DINPro-Light";
+  color: #fff;
+  text-align: center;
+  word-wrap: break-word;
+  box-sizing: border-box;
+  vertical-align: middle;
+  min-width: 158px;
+}
+main .laptops .caracteristicas-3 button {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: "DINPro-Light";
+  background-color: #76b900;
+  border-color: #76b900;
+  border-radius: 0;
+  padding: 14px;
+  font-size: 18px;
+}
+main .laptops .caracteristicas-3 button:hover {
+  background-color: #86d103;
+}
+main .laptops .caracteristicas-4 {
+  background-color: #1a1a1a;
+}
+main .laptops .caracteristicas-4 .gaming h1 {
+  color: #fff;
+  font-family: "GeForce-Bold";
+  padding-bottom: 10px;
+  text-transform: uppercase;
+  font-size: 48px;
+  line-height: 1em;
+}
+main .laptops .caracteristicas-4 .gaming .card-group .card {
+  border: none;
+  background-color: #000;
+}
+main .laptops .caracteristicas-4 .gaming .card-group .card .card-body .card-title {
+  font-weight: bold;
+  color: #76b900;
+  font-family: "GeForce-Bold";
+  font-size: 24px;
+  line-height: 1em;
+  text-transform: uppercase;
+}
+main .laptops .caracteristicas-4 .gaming .card-group .card .card-body .card-text {
+  font-size: 16px;
+  color: #fff;
+  padding: 10px 0;
+  line-height: 24px;
+  font-family: "DINPro-Light";
+}
+main .laptops .caracteristicas-4 .gaming .card-group .card .card-footer a {
+  font-weight: 700;
+  color: #76b900;
+  font-family: "DINPro-Light";
+  text-transform: uppercase;
+  text-decoration: none;
+}
+main .laptops .caracteristicas-5 {
+  background-color: #1a1a1a;
+}
+main .laptops .caracteristicas-5 h1 {
+  color: #76b900;
+  font-family: "GeForce-Bold";
+  padding-bottom: 10px;
+  text-transform: uppercase;
+  font-size: 48px;
+  line-height: 1em;
+}
+main .laptops .caracteristicas-5 .container .col .card {
+  border: none;
+  background-color: #eee;
+  box-shadow: 0 0 15px 3px rgba(117, 185, 0, 0.7607843137);
+}
+main .laptops .caracteristicas-5 .container .col .card a img {
+  object-fit: cover;
+}
+main .laptops .caracteristicas-5 .container .col .card .card-body a {
+  text-decoration: none;
+}
+main .laptops .caracteristicas-5 .container .col .card .card-body a .card-title {
+  color: #333333;
+  font-family: "GeForce-Regular";
+  font-size: 16px;
+  line-height: 1em;
+  text-transform: normal;
+  font-weight: bold;
+}
+main .laptops .caracteristicas-5 .container .col .card .card-body a .card-title:hover {
+  color: #76b900;
+}
+main .laptops .caracteristicas-5 .container .col .card .card-body .text-muted {
+  color: #4d4d4d;
+  font-family: "GeForce-Regular";
+  font-size: 14px;
+  line-height: 1em;
+  text-transform: normal;
+}
+main .laptops .caracteristicas-5 .container .col .card .card-body h6 {
+  font-family: "GeForce-Regular";
+  font-size: 16px;
+  line-height: 1em;
+  text-transform: normal;
+}
+main .laptops .caracteristicas-5 .container .col .card .card-body h6 s {
+  color: red;
+}
+main .laptops .caracteristicas-5 .container .col .card .card-body p {
+  font-size: 16px;
+  padding: 10px 0;
+  line-height: 24px;
+  font-family: "DINPro-Light";
+}
+main .laptops .caracteristicas-5 .container .col .card .card-body button {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: "DINPro-Light";
+  background-color: #76b900;
+  border-color: #76b900;
+  border-radius: 0;
+  padding: 10px;
+  font-size: 16px;
+}
+main .laptops .caracteristicas-5 .container .col .card .card-body button:hover {
+  background-color: #86d103;
+}
+main .carritoCompras {
+  background-color: #1a1a1a;
+}
+main .carritoCompras .offcanvas-header .offcanvas-title {
+  color: #76b900;
+  font-family: "DINPro-Regular";
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 1em;
+}
+main .carritoCompras .offcanvas-header .btn-close {
+  background: none;
+  border: none;
+  color: #76b900;
+}
+main .carritoCompras .offcanvas-header .btn-close:hover {
+  color: #86d103;
+}
+main .carritoCompras .carrito-contenedor table thead tr th {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1em;
+  font-family: "DINPro-Regular";
+  color: #fff;
+  text-align: center;
+  word-wrap: break-word;
+  box-sizing: border-box;
+}
+main .carritoCompras .carrito-contenedor table tbody tr td {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.25em;
+  font-family: "DINPro-Light";
+  color: #fff;
+  text-align: center;
+  word-wrap: break-word;
+  box-sizing: border-box;
+}
+main .carritoCompras .carrito-contenedor table tbody tr td img {
+  box-shadow: 0 0 10px 2px rgba(117, 185, 0, 0.7607843137);
+}
+main .carritoCompras .carrito-contenedor table tbody tr td button {
+  margin: 2px 1px;
+}
+main .carritoCompras .carrito-contenedor table tbody tr td .incrementar {
+  background-color: #0d6efd;
+  color: #eee;
+  border-radius: 0.2em;
+  border: none;
+}
+main .carritoCompras .carrito-contenedor table tbody tr td .incrementar:hover {
+  background-color: rgb(4, 0, 255);
+}
+main .carritoCompras .carrito-contenedor table tbody tr td .decrementar {
+  background-color: #dc3545;
+  color: #eee;
+  border-radius: 0.2em;
+  border: none;
+}
+main .carritoCompras .carrito-contenedor table tbody tr td .decrementar:hover {
+  background-color: rgb(179, 6, 6);
+}
+main .carritoCompras .carrito-contenedor table tbody tr td .eliminar {
+  background-color: rgba(25, 176, 235, 0.631372549);
+  color: #eee;
+  border-radius: 0.2em;
+  border: none;
+}
+main .carritoCompras .carrito-contenedor table tbody tr td .eliminar:hover {
+  background-color: rgb(4, 0, 255);
+}
+main .carritoCompras .carrito-contenedor table tbody th {
+  color: #76b900;
+  font-family: "DINPro-Regular";
+  padding-bottom: 10px;
+  font-size: 15px;
+  line-height: 1em;
+}
+main .carritoCompras .carrito-contenedor table tbody .carritoVacío {
+  color: #76b900;
+  font-family: "DINPro-Regular";
+  padding-bottom: 10px;
+  font-size: 15px;
+  line-height: 1em;
+}
+main .carritoCompras .carrito-contenedor table tfoot th {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1em;
+  font-family: "DINPro-Regular";
+  color: #fff;
+  text-align: center;
+  word-wrap: break-word;
+  box-sizing: border-box;
+}
+main .carritoCompras .carrito-contenedor .botonesProcesar #vaciar-carrito {
+  background-color: rgba(220, 53, 70, 0.768627451);
+  font-size: 16px;
+  line-height: 1em;
+  font-family: "DINPro-Regular";
+  color: #fff;
+  word-wrap: break-word;
+  box-sizing: border-box;
+  text-transform: uppercase;
+}
+main .carritoCompras .carrito-contenedor .botonesProcesar #vaciar-carrito:hover {
+  background-color: #dc3545;
+}
+main .carritoCompras .carrito-contenedor .botonesProcesar #procesar-carrito {
+  background-color: #76b900;
+  border-color: #76b900;
+  font-size: 16px;
+  line-height: 1em;
+  font-family: "DINPro-Regular";
+  color: #fff;
+  word-wrap: break-word;
+  box-sizing: border-box;
+  text-transform: uppercase;
+}
+main .carritoCompras .carrito-contenedor .botonesProcesar #procesar-carrito:hover {
+  background-color: #86d103;
+}
+main .tGraficas .foto-principal {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 46% 0px;
+}
+main .tGraficas .foto-principal .card .card-img-overlay {
+  width: 740px;
+  padding-top: 180px;
+}
+main .tGraficas .foto-principal .card .card-img-overlay h1 {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 60px;
+  line-height: 1em;
+  font-family: "GeForce-Bold";
+  color: #76b900;
+  text-align: left;
+  align-items: center;
+  word-wrap: break-word;
+  padding-top: 80px;
+}
+main .tGraficas .foto-principal .card .card-img-overlay h2 {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 36px;
+  line-height: 1em;
+  font-family: "GeForce-Bold";
+  color: #fff;
+  text-align: left;
+  word-wrap: break-word;
+}
+main .tGraficas .foto-principal .card .card-img-overlay p {
+  padding: 10px 0;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: "DINPro-Light";
+  color: #fff;
+  text-align: left;
+  word-wrap: break-word;
+}
+main .tGraficas .video-caracteristicas {
+  position: relative;
+  overflow: hidden;
+  padding: 30px;
+}
+main .tGraficas .video-caracteristicas video {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  z-index: 0;
+}
+main .tGraficas .video-caracteristicas h1 {
+  position: relative;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 48px;
+  line-height: 1em;
+  font-family: "GeForce-Bold";
+  color: #fff;
+  padding-bottom: 20px;
+}
+main .tGraficas .video-caracteristicas .detalles-laptops .col .card {
+  background: none;
+  border: none;
+  height: 100%;
+}
+main .tGraficas .video-caracteristicas .detalles-laptops .col .card img {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto;
+}
+main .tGraficas .video-caracteristicas .detalles-laptops .col .card h5 {
+  width: 90%;
+  margin: 0 auto;
+  text-transform: uppercase;
+  font-size: 20px;
+  line-height: 18px;
+  font-family: "GeForce-Bold";
+  color: #fff;
+  padding: 10px;
+}
+main .tGraficas .video-caracteristicas .detalles-laptops .col .card p {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: "DINPro-Light";
+  color: #fff;
+}
+main .tGraficas .caracteristicas-1 {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+main .tGraficas .caracteristicas-1 .card .card-img-overlay h1 {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 48px;
+  line-height: 1em;
+  font-family: "GeForce-Bold";
+  color: #fff;
+  word-wrap: break-word;
+  padding-top: 30px;
+}
+main .tGraficas .caracteristicas-1 .card .card-img-overlay h2 {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 36px;
+  line-height: 1em;
+  font-family: "GeForce-Bold";
+  color: #76b900;
+  align-items: center;
+  word-wrap: break-word;
+}
+main .tGraficas .caracteristicas-1 .card .card-img-overlay p {
+  padding-top: 15px;
+  padding-bottom: 20px;
+  width: 70%;
+  margin: 0 auto;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: "DINPro-Light";
+  color: #fff;
+  align-items: center;
+  word-wrap: break-word;
+}
+main .tGraficas .caracteristicas-1 .card .card-img-overlay p span {
+  color: #76b900;
+}
+main .tGraficas .caracteristicas-1 .card .card-img-overlay a {
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: "DINPro-Light";
+  color: #76b900;
+  align-items: center;
+  word-wrap: break-word;
+}
+main .tGraficas .caracteristicas-2 {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+main .tGraficas .caracteristicas-2 .card .card-img-overlay h1 {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 48px;
+  line-height: 1em;
+  font-family: "GeForce-Bold";
+  color: #fff;
+  word-wrap: break-word;
+  padding-top: 30px;
+}
+main .tGraficas .caracteristicas-2 .card .card-img-overlay h2 {
+  padding-top: 5px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 24px;
+  line-height: 1em;
+  font-family: "GeForce-Bold";
+  color: #fff;
+  align-items: center;
+  word-wrap: break-word;
+}
+main .tGraficas .caracteristicas-2 .card .card-img-overlay p {
+  padding-top: 15px;
+  padding-bottom: 20px;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: "DINPro-Light";
+  color: #fff;
+  align-items: center;
+  word-wrap: break-word;
+}
+main .tGraficas .caracteristicas-2 .card .card-img-overlay a {
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: "DINPro-Light";
+  color: #76b900;
+  align-items: center;
+  word-wrap: break-word;
+}
+main .tGraficas .caracteristicas-2 .card .card-img-overlay button {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: "DINPro-Light";
+  background-color: #76b900;
+  border-color: #76b900;
+  border-radius: 0;
+  padding: 14px;
+  font-size: 18px;
+}
+main .tGraficas .caracteristicas-2 .card .card-img-overlay button:hover {
+  background-color: #86d103;
+}
+main .tGraficas .caracteristicas-3 {
+  background-color: #000;
+  padding: 50px;
+}
+main .tGraficas .caracteristicas-3 h1 {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 48px;
+  line-height: 1em;
+  font-family: "GeForce-Bold";
+  color: #fff;
+  word-wrap: break-word;
+}
+main .tGraficas .caracteristicas-3 .table-responsive {
+  padding: 40px;
+}
+main .tGraficas .caracteristicas-3 .table-responsive table thead tr th {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 1em;
+  font-family: "GeForce-Bold";
+  color: #76b900;
+  text-align: center;
+  word-wrap: break-word;
+  box-sizing: border-box;
+  padding-bottom: 15px;
+}
+main .tGraficas .caracteristicas-3 .table-responsive table tbody tr th {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.25em;
+  font-family: "DINPro-Light";
+  color: #fff;
+  word-wrap: break-word;
+  box-sizing: border-box;
+  padding: 30px 0px;
+  min-width: 158px;
+  text-align: left;
+}
+main .tGraficas .caracteristicas-3 .table-responsive table tbody tr td {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.25em;
+  font-family: "DINPro-Light";
+  color: #fff;
+  text-align: center;
+  word-wrap: break-word;
+  box-sizing: border-box;
+  vertical-align: middle;
+  min-width: 158px;
+}
+main .tGraficas .caracteristicas-3 button {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: "DINPro-Light";
+  background-color: #76b900;
+  border-color: #76b900;
+  border-radius: 0;
+  padding: 14px;
+  font-size: 18px;
+}
+main .tGraficas .caracteristicas-3 button:hover {
+  background-color: #86d103;
+}
+main .tGraficas .caracteristicas-3 p {
+  width: 54%;
+  margin: 0 auto;
+  color: #666;
+  font-weight: normal;
+  font-family: "DINPro-Light";
+  border-radius: 0;
+  padding-top: 30px;
+  font-size: 16px;
+  line-height: 24px;
+}
+main .tGraficas .caracteristicas-4 {
+  background-color: #1a1a1a;
+  padding: 100px 0px;
+}
+main .tGraficas .caracteristicas-4 .gaming h1 {
+  color: #fff;
+  font-family: "GeForce-Bold";
+  padding-bottom: 10px;
+  text-transform: uppercase;
+  font-size: 48px;
+  line-height: 1em;
+  padding-bottom: 25px;
+}
+main .tGraficas .caracteristicas-4 .gaming .card-group .card {
+  border: none;
+  background-color: #000;
+}
+main .tGraficas .caracteristicas-4 .gaming .card-group .card .card-body .card-title {
+  font-weight: bold;
+  color: #76b900;
+  font-family: "GeForce-Bold";
+  font-size: 24px;
+  line-height: 1em;
+  text-transform: uppercase;
+}
+main .tGraficas .caracteristicas-4 .gaming .card-group .card .card-body .card-text {
+  font-size: 16px;
+  color: #fff;
+  padding: 10px 0;
+  line-height: 24px;
+  font-family: "DINPro-Light";
+}
+main .tGraficas .caracteristicas-4 .gaming .card-group .card .card-footer a {
+  font-weight: 700;
+  color: #76b900;
+  font-family: "DINPro-Light";
+  text-transform: uppercase;
+  text-decoration: none;
+}
+main .tGraficas .caracteristicas-5 {
+  background-color: #1a1a1a;
+}
+main .tGraficas .caracteristicas-5 h1 {
+  padding-top: 80px;
+  color: #76b900;
+  font-family: "GeForce-Bold";
+  padding-bottom: 10px;
+  text-transform: uppercase;
+  font-size: 48px;
+  line-height: 1em;
+}
+main .tGraficas .caracteristicas-5 .container {
+  padding-top: 25px;
+}
+main .tGraficas .caracteristicas-5 .container .col .card {
+  border: none;
+  background-color: #eee;
+  box-shadow: 0 0 15px 3px rgba(117, 185, 0, 0.7607843137);
+}
+main .tGraficas .caracteristicas-5 .container .col .card a img {
+  object-fit: cover;
+}
+main .tGraficas .caracteristicas-5 .container .col .card .card-body a {
+  text-decoration: none;
+}
+main .tGraficas .caracteristicas-5 .container .col .card .card-body a .card-title {
+  color: #333333;
+  font-family: "GeForce-Regular";
+  font-size: 16px;
+  line-height: 1em;
+  text-transform: normal;
+  font-weight: bold;
+}
+main .tGraficas .caracteristicas-5 .container .col .card .card-body a .card-title:hover {
+  color: #76b900;
+}
+main .tGraficas .caracteristicas-5 .container .col .card .card-body .text-muted {
+  color: #4d4d4d;
+  font-family: "GeForce-Regular";
+  font-size: 14px;
+  line-height: 1em;
+  text-transform: normal;
+}
+main .tGraficas .caracteristicas-5 .container .col .card .card-body h6 {
+  font-family: "GeForce-Regular";
+  font-size: 16px;
+  line-height: 1em;
+  text-transform: normal;
+}
+main .tGraficas .caracteristicas-5 .container .col .card .card-body h6 s {
+  color: red;
+}
+main .tGraficas .caracteristicas-5 .container .col .card .card-body p {
+  font-size: 16px;
+  padding: 10px 0;
+  line-height: 24px;
+  font-family: "DINPro-Light";
+}
+main .tGraficas .caracteristicas-5 .container .col .card .card-body button {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: "DINPro-Light";
+  background-color: #76b900;
+  border-color: #76b900;
+  border-radius: 0;
+  padding: 10px;
+  font-size: 16px;
+}
+main .tGraficas .caracteristicas-5 .container .col .card .card-body button:hover {
+  background-color: #86d103;
+}
+main .monitores .foto-principal {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 46% 0px;
+}
+main .monitores .foto-principal .card .card-img-overlay {
+  width: 680px;
+  padding-top: 95px;
+}
+main .monitores .foto-principal .card .card-img-overlay img {
+  padding-top: 80px;
+  padding-bottom: 20px;
+  width: 234px;
+}
+main .monitores .foto-principal .card .card-img-overlay h1 {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 32px;
+  line-height: 32px;
+  font-family: "GeForce-Bold";
+  color: #76b900;
+  text-align: left;
+  align-items: center;
+  word-wrap: break-word;
+}
+main .monitores .foto-principal .card .card-img-overlay p {
+  padding: 10px 0;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: "DINPro-Light";
+  color: #f7f7f7;
+  text-align: left;
+  word-wrap: break-word;
+}
+main .monitores .foto-principal .card .card-img-overlay a {
+  font-weight: bold;
+  text-decoration: none;
+  line-height: 1.5em;
+  font-family: "DINPro-Light";
+  color: #76b900;
+  text-align: left;
+  align-items: center;
+  word-wrap: break-word;
+}
+main .monitores .caracteristicas {
+  background-color: #000;
+}
+main .monitores .caracteristicas h1 {
+  padding-top: 100px;
+  font-weight: normal;
+  text-transform: uppercase;
+  font-size: 40px;
+  line-height: 40px;
+  font-family: "GeForce-Regular";
+  color: #f7f7f7;
+  word-wrap: break-word;
+}
+main .monitores .caracteristicas .container .row .col-4 h2 {
+  padding-top: 40px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 24px;
+  line-height: 24px;
+  font-family: "DINPro-Light";
+  color: #fff;
+  word-wrap: break-word;
+}
+main .monitores .caracteristicas .container .row .col-4 p {
+  padding-top: 15px;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: "DINPro-Light";
+  color: #f7f7f7;
+  word-wrap: break-word;
+}
+main .monitores .caracteristicas .container .table {
+  width: 50%;
+  margin: 0 auto;
+}
+main .monitores .caracteristicas .container .table thead tr th {
+  padding: 50px 20px 20px 20px;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 24px;
+  font-family: "DINPro-Light";
+  color: #fff;
+  word-wrap: break-word;
+  vertical-align: middle;
+}
+main .monitores .caracteristicas .container .table tbody tr th {
+  padding: 20px;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 21px;
+  font-family: "DINPro-Light";
+  color: #76b900;
+  word-wrap: break-word;
+  vertical-align: middle;
+}
+main .monitores .caracteristicas .container .table tbody tr td .fa-check {
+  padding: 20px;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 21px;
+  color: #76b900;
+  word-wrap: break-word;
+  vertical-align: middle;
+}
+main .monitores .caracteristicas .container .table tbody tr td .fa-minus {
+  padding: 20px;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 21px;
+  color: #666666;
+  word-wrap: break-word;
+  vertical-align: middle;
+}
+main .monitores .caracteristicas .container button {
+  margin: 120px 0px 60px 0px;
+  padding: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: "DINPro-Light";
+  background-color: #76b900;
+  border-color: #76b900;
+  border-radius: 0;
+  font-size: 18px;
+  line-height: 1;
+}
+main .monitores .caracteristicas .container button:hover {
+  background-color: #86d103;
+}
+main .monitores .rendimiento {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 54% 0px;
+}
+main .monitores .rendimiento .container h1 {
+  width: 41.5%;
+  margin-left: auto;
+  font-weight: normal;
+  text-transform: uppercase;
+  font-size: 40px;
+  line-height: 40px;
+  font-family: "GeForce-Regular";
+  color: #f7f7f7;
+  text-align: left;
+  align-items: center;
+  word-wrap: break-word;
+  padding-top: 200px;
+}
+main .monitores .rendimiento .container p {
+  width: 41.5%;
+  margin-left: auto;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: "DINPro-Light";
+  color: #f7f7f7;
+  text-align: left;
+  word-wrap: break-word;
+}
+main .monitores .calidad-imagen {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 54% 0px;
+}
+main .monitores .calidad-imagen .container h1 {
+  width: 39%;
+  margin-right: auto;
+  font-weight: normal;
+  text-transform: uppercase;
+  font-size: 40px;
+  line-height: 40px;
+  font-family: "GeForce-Regular";
+  color: #f7f7f7;
+  text-align: left;
+  align-items: center;
+  word-wrap: break-word;
+  padding-top: 200px;
+}
+main .monitores .calidad-imagen .container p {
+  width: 41.5%;
+  margin-right: auto;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: "DINPro-Light";
+  color: #f7f7f7;
+  text-align: left;
+  word-wrap: break-word;
+}
+main .monitores .v-medida {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 54% 0px;
+}
+main .monitores .v-medida .container h1 {
+  width: 41.5%;
+  margin-left: auto;
+  font-weight: normal;
+  text-transform: uppercase;
+  font-size: 40px;
+  line-height: 40px;
+  font-family: "GeForce-Regular";
+  color: #f7f7f7;
+  text-align: left;
+  align-items: center;
+  word-wrap: break-word;
+  padding-top: 80px;
+}
+main .monitores .v-medida .container p {
+  width: 41.5%;
+  margin-left: auto;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: "DINPro-Light";
+  color: #f7f7f7;
+  text-align: left;
+  word-wrap: break-word;
+}
+main .monitores .v-medida .container .boton-v {
+  width: 41.5%;
+  margin-left: auto;
+}
+main .monitores .v-medida .container .boton-v button {
+  padding: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: "DINPro-Light";
+  background-color: #76b900;
+  border-color: #76b900;
+  border-radius: 0;
+  font-size: 18px;
+  line-height: 1;
+  text-align: left;
+}
+main .monitores .v-medida .container .boton-v button:hover {
+  background-color: #86d103;
+}
+main .monitores .para-juegos {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 54% 0px;
+}
+main .monitores .para-juegos .container h1 {
+  width: 39%;
+  margin-right: auto;
+  font-weight: normal;
+  text-transform: uppercase;
+  font-size: 40px;
+  line-height: 40px;
+  font-family: "GeForce-Regular";
+  color: #f7f7f7;
+  text-align: left;
+  align-items: center;
+  word-wrap: break-word;
+  padding-top: 150px;
+}
+main .monitores .para-juegos .container p {
+  width: 41.5%;
+  margin-right: auto;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: "DINPro-Light";
+  color: #f7f7f7;
+  text-align: left;
+  word-wrap: break-word;
+}
+main .monitores .para-juegos .container .boton-juegos button {
+  padding: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: "DINPro-Light";
+  background-color: #76b900;
+  border-color: #76b900;
+  border-radius: 0;
+  font-size: 18px;
+  line-height: 1;
+  text-align: left;
+}
+main .monitores .para-juegos .container .boton-juegos button:hover {
+  background-color: #86d103;
+}
+main .monitores .calidad {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 54% 0px;
+}
+main .monitores .calidad .container h1 {
+  width: 41.5%;
+  margin-left: auto;
+  font-weight: normal;
+  text-transform: uppercase;
+  font-size: 40px;
+  line-height: 40px;
+  font-family: "GeForce-Regular";
+  color: #f7f7f7;
+  text-align: left;
+  align-items: center;
+  word-wrap: break-word;
+  padding-top: 150px;
+}
+main .monitores .calidad .container p {
+  width: 41.5%;
+  margin-left: auto;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: "DINPro-Light";
+  color: #f7f7f7;
+  text-align: left;
+  word-wrap: break-word;
+}
+main .monitores .calidad .container .boton-calidad {
+  width: 41.5%;
+  margin-left: auto;
+}
+main .monitores .calidad .container .boton-calidad button {
+  padding: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: "DINPro-Light";
+  background-color: #76b900;
+  border-color: #76b900;
+  border-radius: 0;
+  font-size: 18px;
+  line-height: 1;
+  text-align: left;
+}
+main .monitores .calidad .container .boton-calidad button:hover {
+  background-color: #86d103;
+}
+main .monitores .ventajas {
+  background-color: #000;
+}
+main .monitores .ventajas h1 {
+  padding-top: 100px;
+  font-weight: normal;
+  text-transform: uppercase;
+  font-size: 40px;
+  line-height: 40px;
+  font-family: "GeForce-Regular";
+  color: #f7f7f7;
+  word-wrap: break-word;
+}
+main .monitores .ventajas .container {
+  padding-bottom: 60px;
+}
+main .monitores .ventajas .container .row .col-4 img {
+  padding-top: 40px;
+}
+main .monitores .ventajas .container .row .col-4 p {
+  padding-top: 15px;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: "DINPro-Light";
+  color: #f7f7f7;
+  word-wrap: break-word;
+}
+main .monitores .caracteristicas-5 {
+  background-color: #1a1a1a;
+}
+main .monitores .caracteristicas-5 h1 {
+  color: #76b900;
+  font-family: "GeForce-Bold";
+  padding-bottom: 10px;
+  text-transform: uppercase;
+  font-size: 48px;
+  line-height: 1em;
+  padding-top: 90px;
+}
+main .monitores .caracteristicas-5 .container {
+  padding-top: 25px;
+}
+main .monitores .caracteristicas-5 .container .col .card {
+  border: none;
+  background-color: #eee;
+  box-shadow: 0 0 15px 3px rgba(117, 185, 0, 0.7607843137);
+}
+main .monitores .caracteristicas-5 .container .col .card .card-body a {
+  text-decoration: none;
+}
+main .monitores .caracteristicas-5 .container .col .card .card-body a .card-title {
+  color: #333333;
+  font-family: "GeForce-Regular";
+  font-size: 16px;
+  line-height: 1em;
+  text-transform: normal;
+  font-weight: bold;
+}
+main .monitores .caracteristicas-5 .container .col .card .card-body a .card-title:hover {
+  color: #76b900;
+}
+main .monitores .caracteristicas-5 .container .col .card .card-body .text-muted {
+  color: #4d4d4d;
+  font-family: "GeForce-Regular";
+  font-size: 14px;
+  line-height: 1em;
+  text-transform: normal;
+}
+main .monitores .caracteristicas-5 .container .col .card .card-body h6 {
+  font-family: "GeForce-Regular";
+  font-size: 16px;
+  line-height: 1em;
+  text-transform: normal;
+}
+main .monitores .caracteristicas-5 .container .col .card .card-body h6 s {
+  color: red;
+}
+main .monitores .caracteristicas-5 .container .col .card .card-body p {
+  font-size: 16px;
+  padding: 10px 0;
+  line-height: 24px;
+  font-family: "DINPro-Light";
+}
+main .monitores .caracteristicas-5 .container .col .card .card-body button {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: "DINPro-Light";
+  background-color: #76b900;
+  border-color: #76b900;
+  border-radius: 0;
+  padding: 10px;
+  font-size: 16px;
+}
+main .monitores .caracteristicas-5 .container .col .card .card-body button:hover {
+  background-color: #86d103;
+}
+
+footer {
+  background-color: #000;
+}
+footer .footer-arriba .infCorporativa {
+  width: 33%;
+  padding-right: 20px;
+  padding-top: 50px;
+}
+footer .footer-arriba .infCorporativa h2 {
+  color: #eee;
+  padding-bottom: 12px;
+  font-size: 24px;
+  line-height: 26px;
+  font-weight: bold;
+  font-family: "DINPro-Light";
+  text-transform: none;
+  border-bottom: 1px solid #747474;
+}
+footer .footer-arriba .infCorporativa .page-footer li {
+  list-style: none;
+}
+footer .footer-arriba .infCorporativa .page-footer li a {
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 30px;
+  color: #76b900;
+  font-family: "DINPro-Light";
+  font-weight: normal;
+  margin-left: -30px;
+}
+footer .footer-abajo {
+  padding-top: 30px;
+  padding-bottom: 50px;
+}
+footer .footer-abajo .footerIzquierda .izquierdaf {
+  padding-right: 20px;
+}
+footer .footer-abajo .footerIzquierda .izquierdaf i {
+  color: #76b900;
+}
+footer .footer-abajo .footerIzquierda .izquierdaf span {
+  font-size: 24px;
+  line-height: 1;
+  color: white;
+  font-family: "DINPro-Light";
+}
+footer .footer-abajo .footerIzquierda .izquierdaf button {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: "DINPro-Light";
+  background-color: #76b900;
+  border-color: #76b900;
+  border-radius: 0;
+  padding: 14px;
+  font-size: 18px;
+  line-height: 1;
+}
+footer .footer-abajo .footerIzquierda .izquierdaf button:hover {
+  background-color: #86d103;
+}
+footer .footer-abajo .footerDerecha .derechaf {
+  padding-left: 20px;
+}
+footer .footer-abajo .footerDerecha .derechaf h6 {
+  font-size: 16px;
+  color: #747474;
+  font-size: "DINPro-Light";
+}
+
+/*# sourceMappingURL=main.css.map */

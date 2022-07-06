@@ -1,0 +1,82 @@
+[
+   {
+      "id":1,
+      "img":"../imagenes/monitor-1.jpg",
+      "nombre":"LG 27GL650F-B Monitor",
+      "descripcion":"LG 27GL650F-B Monitor de Juegos Compatible con G-Sync Full HD de 27 Pulgadas con frecuencia de actualización de 144Hz y HDR 10",
+      "sku":"LG27GL650F-B",
+      "pReal": 8199.00,
+      "pDescuento": 5022.00,
+      "stock": 8
+   },
+   {
+      "id":2,
+      "img":"../imagenes/monitor-2.jpg",
+      "nombre":"Asus Monitor IPS TUF",
+      "descripcion":"Asus Monitor IPS TUF Gaming VG27AQ, 27', WQHD (2560 x 1440), 165Hz, G-Sync, HDMI, DisplayPort (VG27AQ) ",
+      "sku":"VG27AQ",
+      "pReal": 8888.00,
+      "pDescuento": 7200.00,
+      "stock": 15
+   },
+   {
+      "id":3,
+      "img":"../imagenes/monitor-3.jpg",
+      "nombre":"LG 34GL750-B, Monitor 34'",
+      "descripcion":"LG 34GL750-B, Monitor 34' Gaming UltraGear, UltraWide 21:9, 144Hz ,1ms, IPS, Adaptative Sync, G Sync, AMD Free Sync.",
+      "sku":"34GL750-B",
+      "pReal": 14999.00,
+      "pDescuento": 10699.00,
+      "stock": 5
+   },
+   {
+      "id":4,
+      "img":"../imagenes/monitor-4.jpg",
+      "nombre":"LG 27GP750-B 27” Ultragear",
+      "descripcion":"LG 27GP750-B 27” Ultragear FHD (1920 x 1080) IPS Gaming Monitor w/ 1ms Response Time & 240Hz Refresh Rate, NVIDIA G-Sync",
+      "sku":"27GP750-B",
+      "pReal": 6277.71,
+      "pDescuento": 5987.84,
+      "stock": 3
+   },
+   {
+      "id":5,
+      "img":"../imagenes/monitor-5.jpg",
+      "nombre":"LG 34GN850-B UltraWide Gaming Monitor 34'",
+      "descripcion":"LG 34GN850-B UltraWide Gaming Monitor 34' Nano IPS Curved WQHD 144Hz 1ms G-Sync Compatible, FreeSync DP, HDMI USB3.0 1U/2D, HDR400",
+      "sku":"34GN850-B",
+      "pReal": 27999,
+      "pDescuento": 22679.10,
+      "stock": 1
+   },
+   {
+      "id":6,
+      "img":"../imagenes/monitor-6.jpg",
+      "nombre":"LG Ultragear - Monitor para Videojuegos, 27 Pulgadas",
+      "descripcion":"LG Ultragear - Monitor para Videojuegos, 27 Pulgadas, QHD Nano IPS 1ms, Compatible con NVIDIA G-Sync, 27 Pulgadas Nano IPS...",
+      "sku":"NE63060019K9-190AD",
+      "pReal": 9529.00,
+      "pDescuento": 8577.00,
+      "stock": 7
+   },
+   {
+      "id":7,
+      "img":"../imagenes/monitor-7.jpg",
+      "nombre":"Alienware AW2521H - Monitor",
+      "descripcion":"Alienware AW2521H - Monitor de juegos de 360 Hz FHD de 24.5 pulgadas (Full HD 1920 x 1080p), certificado NVIDIA G-SYNC...",
+      "sku":"AW2521H",
+      "pReal": 18189.00,
+      "pDescuento": 11557.29,
+      "stock": 18
+   },
+   {
+      "id":8,
+      "img":"../imagenes/monitor-8.jpg",
+      "nombre":"Laptop AORUS 17 YE5 17.3'",
+      "descripcion":"Asus Monitor ROG Swift 360Hz PG259QNR Esports NVIDIA G-Sync Gaming Monitor - 24,5 Pulgadas FHD, NVIDIA Reflex, 360 Hz...",
+      "sku":"PG259QNR",
+      "pReal": 16529.00,
+      "pDescuento": 12200.00,
+      "stock": 2
+   }
+]

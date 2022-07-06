@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Laptops | nvidia</title>
+
+    <!-- LOGO PÁGINA -->
+    <link
+      class="icono-principal"
+      rel="shortcut icon"
+      href="../imagenes/LogoNvidiaPagina.png"
+      type="image/x-icon"
+      width="16px"
+      height="16px"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/main.css" />
+
+    <!-- Bootstrap - CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+
+    <!-- Bootstrap - JavaScript -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Bootstrap - Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css"
+    />
+
+    <!-- Font-Awesome -->
+    <script
+      src="https://kit.fontawesome.com/c98c29ff31.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- SweetAlert -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="sticky-top">
+      <nav class="navbar navbar-expand-lg bg-light sticky-top">
+        <div class="container">
+          <!-- Logo -->
+          <a class="navbar-brand" href="../index.html">
+            <img src="../imagenes/Nvidia-Horizontal-Logo.wine.svg" alt="" />
+          </a>
+          <!-- Pestañas -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="offcanvas offcanvas-end"
+            tabindex="-1"
+            id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel"
+          >
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+                Offcanvas
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="offcanvas-body">
+              <!-- Pestañas izquierda -->
+              <ul
+                class="navbar-nav justify-content-start flex-grow-1 pe-3 py-1"
+              >
+                <li class="nav-item">
+                  <a
+                    class="nav-link active"
+                    aria-current="page"
+                    href="laptops.html"
+                    >Laptops</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../tGraficas/tGraficas.html"
+                    >Tarjetas Gráficas</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../monitores/monitores.html"
+                    >Monitores G-SYNC</a
+                  >
+                </li>
+              </ul>
+              <!-- Pestañas derecha -->
+              <ul
+                class="navbar-nav navbar-adicional justify-content-end flex-grow-1 pe-1 py-2"
+              >
+                <li class="nav-item">
+                  <a class="nav-link" href="#">DRIVERS</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">SOPORTE</a>
+                </li>
+              </ul>
+              <!-- Iconos -->
+              <ul class="navbar-nav navbar-icons flex-row flex-wrap pt-1">
+                <li class="nav-item">
+                  <a class="nav-link" href=""
+                    ><i class="bi bi-search fa-lg"></i
+                  ></a>
+                </li>
+                <!-- Carrito de Compras -->
+                <li class="nav-item" id="contadorCar">
+                  <button
+                    id="open"
+                    class="nav-link text-body btn btn-primary"
+                    type="button"
+                    data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasRight"
+                    aria-controls="offcanvasRight"
+                  >
+                    <i class="bi bi-cart fa-lg"></i
+                    ><span id="contador-carrito">0</span>
+                  </button>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href=""
+                    ><i class="bi bi-person-circle fa-lg"></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <nav class="navbar navbar-expand-lg sticky-top navbar-dos sticky-top">
+        <div class="container">
+          <!-- Pestañas -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="offcanvas offcanvas-end"
+            tabindex="-1"
+            id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel"
+          >
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+                Offcanvas
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="offcanvas-body">
+              <!-- Pestañas izquierda -->
+              <ul
+                class="navbar-nav justify-content-start flex-grow-1 pe-3 py-1"
+              >
+                <li class="nav-item">
+                  <a
+                    class="nav-link active"
+                    aria-current="page"
+                    href="laptops.html"
+                  >
+                    Laptops GeForce RTX Series 30
+                  </a>
+                </li>
+              </ul>
+              <!-- Pestañas derecha -->
+              <ul
+                class="navbar-nav navbar-adicional justify-content-end flex-grow-1 pe-1 py-2"
+              >
+                <li class="nav-item">
+                  <a class="nav-link" href="#caracteristicas"
+                    >CARACTERISTICAS</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#rtx">RTX. It’s On</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#dls">DLS</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#especificaciones"
+                    >ESPECIFICACIONES</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#beneficiosAdicionales"
+                    >BENEFICIOS ADICIONALES</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link linkComprar" href="#comprarAhora"
+                    >COMPRAR AHORA</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- MAIN -->
+    <main>
+      <div class="laptops">
+        <!-- Foto-principal -->
+        <section
+          class="foto-principal"
+          style="
+            background-image: url('../imagenes/carousel-1.jpg');
+            height: 770px;
+          "
+        >
+          <div class="card bg-dark text-white container">
+            <div class="card-img-overlay">
+              <h1 class="">Laptops GeForce RTX Serie 30</h1>
+              <h2>LA JUGADA DEFINITIVA</h2>
+              <p>
+                Las Tarjetas Gráficas NVIDIA® GeForce RTX™ Serie 30 para Laptops
+                potencian las laptops más rápidas del mundo para los jugadores y
+                los creadores. Se construyeron con Ampere, la arquitectura RTX
+                de 2.º generación de NVIDIA, para brindarte los gráficos con ray
+                tracing más realistas y las funciones de IA de vanguardia, como
+                NVIDIA DLSS. Además, las Tecnologías Max-Q liberan la potencia
+                de la IA para crear laptops delgadas y de alto rendimiento, que
+                son más rápidas y mejores que nunca.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Caracteristicas -->
+        <section class="video-caracteristicas" id="caracteristicas">
+          <video
+            src="../imagenes/video-laptops.webm"
+            autoplay="true"
+            loop="true"
+            alt="..."
+          ></video>
+          <h1 class="text-center pt-4">SOLO EN GeForce RTX</h1>
+          <div
+            class="container detalles-laptops row row-cols-1 row-cols-md-4 g-4 mx-auto text-center"
+          >
+            <div class="col">
+              <div class="card" style="background: transparent; border: none">
+                <img src="../imagenes/caracteristica-laptop1.svg" alt="" />
+                <h5>LAS GPU MÁS RÁPIDAS DEL MUNDO</h5>
+                <p>Arquitectura NVIDIA Ampere</p>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <img src="../imagenes/caracteristica-laptop2.svg" alt="" />
+                <h5>GRÁFICOS MÁS ENVOLVENTES Y REALISTAS</h5>
+                <p>Ray Tracing de 2ª generación</p>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <img src="../imagenes/caracteristica-laptop3.svg" alt="" />
+                <h5>RENDIMIENTO ACELERADO POR IA</h5>
+                <p>NVIDIA DLSS</p>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <img src="../imagenes/caracteristica-laptop4.svg" alt="" />
+                <h5>LATENCIA DE SISTEMA MÁS BAJA</h5>
+                <p>NVIDIA Reflex</p>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <img src="../imagenes/caracteristica-laptop5.svg" alt="" />
+                <h5>LA MEJOR EXPERIENCIA PARA CADA JUGADOR</h5>
+                <p>Drivers Game Ready</p>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <img src="../imagenes/caracteristica-laptop6.svg" alt="" />
+                <h5>REALIZADO PARA TRANSMISIÓN EN VIVO</h5>
+                <p>NVIDIA Encoder</p>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <img src="../imagenes/caracteristica-laptop7.svg" alt="" />
+                <h5>VOZ Y VIDEO IMPULSADOS POR IA</h5>
+                <p>App NVIDIA Broadcast</p>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <img src="../imagenes/caracteristica-laptop8.svg" alt="" />
+                <h5>ACELERA TU CREATIVIDAD</h5>
+                <p>NVIDIA Studio</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- RTX-IT´S ON -->
+        <section
+          class="caracteristicas-1"
+          style="
+            background-image: url('../imagenes/geforce-rtx-games-hero-bg-2560-d.jpg');
+            height: 770px;
+          "
+          id="rtx"
+        >
+          <div class="card bg-dark text-white container">
+            <div class="card-img-overlay text-center">
+              <h1>RTX. It’s On.</h1>
+              <h2>RAY TRACING E IA DEFINITIVOS</h2>
+              <p>
+                NVIDIA RTX es la plataforma más avanzada para las tecnologías de
+                ray tracing y de IA que están revolucionando las formas en que
+                jugamos y creamos. Más de 150 de los mejores juegos y
+                aplicaciones utilizan RTX para ofrecer gráficos realistas con un
+                rendimiento increíblemente rápido o nuevas funciones de IA de
+                vanguardia como
+                <span>NVIDIA DLSS</span> y <span>NVIDIA Broadcast</span>. RTX es
+                el nuevo estándar.
+              </p>
+              <a href=""
+                >CONOCER LOS ÚLTIMOS JUEGOS
+                <i class="fa-solid fa-angle-right"></i
+              ></a>
+            </div>
+          </div>
+        </section>
+
+        <!-- DLS -->
+        <section
+          class="caracteristicas-2"
+          style="
+            background-image: url('../imagenes/geforce-rtx-games-dlss-ai-bg-2560x770-d.jpg');
+            height: 770px;
+          "
+          id="dls"
+        >
+          <div class="card bg-dark container text-center">
+            <div class="card-img-overlay">
+              <h1 class="">OBTÉN UN RENDIMIENTO MÁS RÁPIDO CON NVIDIA DLSS</h1>
+              <h2>
+                MÁXIMO NIVEL DE FPS. MÁXIMA CALIDAD. CON LA TECNOLOGÍA DE IA.
+              </h2>
+              <p>
+                Consigue un aumento de rendimiento con NVIDIA DLSS (Deep
+                Learning Super Sampling). Los Núcleos Tensor especializados en
+                IA de las tarjetas gráficas GeForce RTX aumentan la velocidad
+                con una calidad de imagen sin compromisos. Esto te permite
+                aumentar la configuración y la resolución para disfrutar de una
+                experiencia visual aún mejor.
+              </p>
+              <button type="button" class="btn btn-secondary text-start">
+                MÁS INFORMACIÓN SOBRE NVIDIA DLSS
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <!-- Especificaciones -->
+        <section class="caracteristicas-3 text-center" id="especificaciones">
+          <h1 class="">ESPECIFICACIONES</h1>
+          <div class="table-responsive container">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col"></th>
+                  <th scope="col">
+                    Tarjeta Gráfica GeForce RTX 3080 Ti para Laptops
+                  </th>
+                  <th scope="col">
+                    Tarjeta Gráfica GeForce RTX 3080 para Laptops
+                  </th>
+                  <th scope="col">
+                    Tarjeta Gráfica GeForce RTX 3070 Ti para Laptops
+                  </th>
+                  <th scope="col">
+                    Tarjeta Gráfica GeForce RTX 3070 para Laptops
+                  </th>
+                  <th scope="col">
+                    Tarjeta Gráfica GeForce RTX 3060 para Laptops
+                  </th>
+                  <th scope="col">
+                    Tarjeta Gráfica GeForce RTX 3050 Ti para Laptops
+                  </th>
+                  <th scope="col">
+                    Tarjeta Gráfica GeForce RTX 3050 para Laptops
+                  </th>
+                </tr>
+              </thead>
+              <tbody class="">
+                <tr>
+                  <th scope="row">Núcleos NVIDIA® CUDA®</th>
+                  <td>7424</td>
+                  <td>6144</td>
+                  <td>5888</td>
+                  <td>5120</td>
+                  <td>3840</td>
+                  <td>2560</td>
+                  <td>2048</td>
+                </tr>
+                <tr>
+                  <th scope="row">Frecuencia Modificada (MHz)</th>
+                  <td>1125 - 1590 MHz</td>
+                  <td>1245 - 1710 MHz</td>
+                  <td>1035 - 1485 MHz</td>
+                  <td>1290 - 1620 MHz</td>
+                  <td>1283 - 1703 MHz</td>
+                  <td>1035 - 1695 MHz</td>
+                  <td>1057 - 1740 MHz</td>
+                </tr>
+                <tr>
+                  <th scope="row">Tamaño de la Memoria</th>
+                  <td>16 GB</td>
+                  <td>8 GB o 16 GB</td>
+                  <td>8 GB</td>
+                  <td>8 GB</td>
+                  <td>6 GB</td>
+                  <td>4 GB</td>
+                  <td>4 GB</td>
+                </tr>
+                <tr>
+                  <th scope="row">Tipo de Memoria</th>
+                  <td>GDDR6</td>
+                  <td>GDDR6</td>
+                  <td>GDDR6</td>
+                  <td>GDDR6</td>
+                  <td>GDDR6</td>
+                  <td>GDDR6</td>
+                  <td>GDDR6</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <button type="button" class="btn btn-secondary text-start">
+            VER TODAS LAS ESPECIFICACIONES
+          </button>
+        </section>
+
+        <!-- Caracteristicas y Beneficios Adicionales -->
+        <section
+          class="cards-info pb-5 caracteristicas-4"
+          id="beneficiosAdicionales"
+        >
+          <div class="container gaming pt-5">
+            <h1 class="text-center">
+              CARACTERÍSTICAS Y BENEFICIOS ADICIONALES
+            </h1>
+            <div class="card-group">
+              <div class="card mx-3 my-3" href="">
+                <a href="">
+                  <img
+                    src="../imagenes/tarjeta1.jpg"
+                    class="card-img-top"
+                    alt="..."
+                    style="width: 100%; height: 225.35px"
+                  />
+                </a>
+                <div class="card-body">
+                  <h5 class="card-title">NVIDIA G-SYNC®</h5>
+                  <p class="card-text">
+                    Las pantallas NVIDIA® G-SYNC® se prueban rigurosamente para
+                    cumplir con los más altos estándares. Disfruta de partidas
+                    fluidas y sin fragmentaciones con altas tasas de
+                    actualización para un rendimiento incomparable.
+                  </p>
+                </div>
+                <div class="card-footer">
+                  <a href=""
+                    >MÁS INFORMACIÓN SOBRE LAS PANTALLAS G-SYNC
+                    <i class="fa-solid fa-angle-right"></i
+                  ></a>
+                </div>
+              </div>
+              <div class="card mx-3 my-3">
+                <a href="">
+                  <img
+                    src="../imagenes/tarjeta2.jpg"
+                    class="card-img-top"
+                    alt="..."
+                    style="width: 100%; height: 225.35px"
+                  />
+                </a>
+                <div class="card-body">
+                  <h5 class="card-title">GeForce Experience</h5>
+                  <p class="card-text">
+                    Captura y comparte los mejores momentos del juego con tus
+                    amigos. Asegúrate de que los drivers estén actualizados y
+                    optimiza la configuración de los juegos. GeForce Experience
+                    te permite hacer todo eso. Es el complemento esencial para
+                    tu laptop GeForce.
+                  </p>
+                </div>
+                <div class="card-footer">
+                  <a href=""
+                    >APROVECHAR AL MÁXIMO GEFORCE EXPERIENCE
+                    <i class="fa-solid fa-angle-right"></i
+                  ></a>
+                </div>
+              </div>
+              <div class="card mx-3 my-3">
+                <a href="">
+                  <img
+                    src="../imagenes/tarjeta3.jpg"
+                    class="card-img-top"
+                    alt="..."
+                    style="width: 100%; height: 225.35px"
+                  />
+                </a>
+                <div class="card-body">
+                  <h5 class="card-title">DirectX 12 Ultimate</h5>
+                  <p class="card-text">
+                    Ahora, los desarrolladores pueden agregar más efectos
+                    gráficos asombrosos a los juegos de PC basados en Microsoft
+                    Windows. Las tarjetas gráficas GeForce RTX cuentan con
+                    funciones de DX12 avanzadas, como el ray tracing y el
+                    sombreado de frecuencia variable, para darles vida a los
+                    juegos, con efectos visuales ultrarrealistas y frecuencias
+                    de cuadros más rápidas.
+                  </p>
+                </div>
+                <div class="card-footer">
+                  <a href=""
+                    >DESCUBRIR LOS BENEFICIOS DE DIRECTX 12 ULTIMATE
+                    <i class="fa-solid fa-angle-right"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <div class="card-group">
+              <div class="card mx-3 my-3">
+                <a href="">
+                  <img
+                    src="../imagenes/tarjeta4.jpg"
+                    class="card-img-top"
+                    alt="..."
+                    style="width: 100%; height: 225.35px"
+                  />
+                </a>
+                <div class="card-body">
+                  <h5 class="card-title">REALIDAD VIRTUAL</h5>
+                  <p class="card-text">
+                    Las tarjetas gráficas de mejor rendimiento proporcionan las
+                    experiencias de realidad virtual más cautivantes y fluidas.
+                  </p>
+                </div>
+                <div class="card-footer">
+                  <a href=""
+                    >EXPLORAR LA REALIDAD VIRTUAL EN GEFORCE RTX
+                    <i class="fa-solid fa-angle-right"></i
+                  ></a>
+                </div>
+              </div>
+              <div class="card mx-3 my-3">
+                <a href="">
+                  <img
+                    src="../imagenes/tarjeta5.jpg"
+                    class="card-img-top"
+                    alt="..."
+                    style="width: 100%; height: 225.35px"
+                  />
+                </a>
+                <div class="card-body">
+                  <h5 class="card-title">NVIDIA Ansel</h5>
+                  <p class="card-text">
+                    Crea arte con tus capturas de pantalla gracias a esta
+                    potente función de fotografía en el juego que toma fotos en
+                    360 grados, HDR y con superresolución.
+                  </p>
+                </div>
+                <div class="card-footer">
+                  <a href=""
+                    >CÓMO CAPTURAR CAPTURAS DE PANTALLA PROFESIONALES
+                    <i class="fa-solid fa-angle-right"></i
+                  ></a>
+                </div>
+              </div>
+              <div class="card mx-3 my-3">
+                <a href="">
+                  <img
+                    src="../imagenes/tarjeta6.jpg"
+                    class="card-img-top"
+                    alt="..."
+                    style="width: 100%; height: 225.35px"
+                  />
+                </a>
+                <div class="card-body">
+                  <h5 class="card-title">ShadowPlay</h5>
+                  <p class="card-text">
+                    Ahora, puedes grabar y compartir videos de las partidas y
+                    transmisiones en vivo en YouTube, Twitch y Facebook. La
+                    tecnología NVIDIA ShadowPlay™ te permite realizar
+                    transmisiones con un impacto mínimo en el rendimiento, para
+                    que no pierdas detalle de los juegos.
+                  </p>
+                </div>
+                <div class="card-footer">
+                  <a href=""
+                    >CÓMO GRABAR TUS MEJORES MOMENTOS
+                    <i class="fa-solid fa-angle-right"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Compra -->
+        <section class="caracteristicas-5 text-center pb-5" id="comprarAhora">
+          <img
+            src="../imagenes/VENTA-LAPTOPS.png"
+            alt=""
+            style="width: 100%; height: 300px"
+          />
+          <h1 class="pt-5">SELECCIONA TU EQUIPO</h1>
+          <div
+            class="container row row-cols-1 row-cols-md-4 g-4 mx-auto"
+            id="contenedorLaptops"
+          ></div>
+        </section>
+      </div>
+
+      <!-- Carrito de Compras-->
+      <div
+        class="carritoCompras offcanvas offcanvas-end"
+        tabindex="-1"
+        id="offcanvasRight"
+        aria-labelledby="offcanvasRightLabel"
+      >
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasRightLabel">
+            Carrito de Compras
+          </h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+          >
+            <i class="fa-solid fa-xmark fa-xl"></i>
+          </button>
+        </div>
+        <div class="offcanvas-body carrito-contenedor" id="carrito-contenedor">
+          <table class="table text-center align-middle">
+            <thead>
+              <tr>
+                <th scope="col">Producto</th>
+                <th scope="col">Cantidad</th>
+                <th scope="col">Acción</th>
+                <th scope="col">Total</th>
+              </tr>
+            </thead>
+            <tbody id="pAgregados">
+              <th scope="row" colspan="4">
+                Carrito vacío - comience a comprar!
+              </th>
+            </tbody>
+            <tfoot id="footerCarrito"></tfoot>
+          </table>
+          <div class="botonesProcesar d-flex justify-content-around">
+            <button class="btn btn-danger btn-sm mt-2" id="vaciar-carrito">
+              Vaciar Carrito
+            </button>
+            <button class="btn btn-danger btn-sm mt-2" id="procesar-carrito">
+              Procesar Compra
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+      <section class="container footer-arriba d-flex pt-3">
+        <div class="infCorporativa">
+          <h2>Información Corporativa</h2>
+          <ul class="page-footer">
+            <li>
+              <a href="">Acerca de NVIDIA</a>
+            </li>
+            <li>
+              <a href="">Presentación Corporativa</a>
+            </li>
+            <li>
+              <a href="">Tecnologías</a>
+            </li>
+            <li>
+              <a href="">Investigación en NVIDIA</a>
+            </li>
+            <li>
+              <a href="">Inversionistas</a>
+            </li>
+            <li>
+              <a href="">Responsabilidad Social</a>
+            </li>
+            <li>
+              <a href="">Fundación NVIDIA</a>
+            </li>
+          </ul>
+        </div>
+        <div class="infCorporativa">
+          <h2>Información Corporativa</h2>
+          <ul class="page-footer">
+            <li>
+              <a href="">Foros</a>
+            </li>
+            <li>
+              <a href="">Carreras</a>
+            </li>
+            <li>
+              <a href="">Únase al Programa de Desarrolladores</a>
+            </li>
+            <li>
+              <a href="">Red de Socios de NVIDIA</a>
+            </li>
+            <li>
+              <a href="">NVIDIA Inception</a>
+            </li>
+            <li>
+              <a href="">Recursos para Capitalistas de Riesgo</a>
+            </li>
+            <li>
+              <a href="">Entrenamiento Técnico</a>
+            </li>
+            <li>
+              <a href="">Soluciones para TI de Empresas</a>
+            </li>
+            <li>
+              <a href="">Servicios Profesionales para Ciencia de Datos</a>
+            </li>
+          </ul>
+        </div>
+        <div class="infCorporativa">
+          <h2>Información Corporativa</h2>
+          <ul class="page-footer">
+            <li>
+              <a href="">Sala de Prensa</a>
+            </li>
+            <li>
+              <a href="">Blog de NVIDIA</a>
+            </li>
+            <li>
+              <a href="">Webinars</a>
+            </li>
+            <li>
+              <a href="">Mantente Informado</a>
+            </li>
+            <li>
+              <a href="">Calendario de Eventos</a>
+            </li>
+            <li>
+              <a href="">NVIDIA GTC</a>
+            </li>
+            <li>
+              <a href="">NVIDIA On-Demand</a>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="container footer-abajo d-flex justify-content-between">
+        <div class="footerIzquierda d-flex align-items-center">
+          <div class="izquierdaf">
+            <i class="fa-regular fa-envelope fa-3x"></i>
+          </div>
+          <div class="izquierdaf">
+            <span>REGÍSTRESE PARA LAS NOTICIAS DE NVIDIA</span>
+          </div>
+          <div class="izquierdaf">
+            <button type="button" class="btn btn-secondary">REGÍSTRATE</button>
+          </div>
+        </div>
+        <div class="footerDerecha d-flex align-items-center">
+          <div class="derechaf">
+            <h6>Sigue a NVIDIA</h6>
+          </div>
+          <div class="derechaf">
+            <i class="fa-brands fa-facebook-f fa-3x"></i>
+          </div>
+          <div class="derechaf">
+            <i class="fa-brands fa-twitter fa-3x"></i>
+          </div>
+          <div class="derechaf">
+            <i class="fa-brands fa-linkedin-in fa-3x"></i>
+          </div>
+          <div class="derechaf">
+            <i class="fa-brands fa-instagram fa-3x"></i>
+          </div>
+          <div class="derechaf">
+            <i class="fa-brands fa-youtube fa-3x"></i>
+          </div>
+        </div>
+      </section>
+    </footer>
+
+    <!-- Template Body Carrito -->
+    <template id="template-carrito">
+      <tr>
+        <td>
+          <img
+            src=""
+            class="card-img-top"
+            alt="..."
+            style="width: 60px; height: 50px"
+          />
+        </td>
+        <td>Cantidad</td>
+        <td>
+          <button class="incrementar"><i class="fa-solid fa-plus"></i></button>
+          <button class="decrementar"><i class="fa-solid fa-minus"></i></button>
+          <button class="eliminar">
+            <i class="fa-solid fa-trash fa-2xs"></i>
+          </button>
+        </td>
+        <td>Total</td>
+      </tr>
+    </template>
+
+    <!-- Template Body Carrito -->
+    <template id="template-carrito2">
+      <tr>
+        <td>
+          <img
+            src=""
+            class="card-img-top"
+            alt="..."
+            style="width: 60px; height: 50px"
+          />
+        </td>
+        <td></td>
+        <td>1</td>
+        <td>
+          <button class="incrementar"><i class="fa-solid fa-plus"></i></button>
+          <button class="decrementar"><i class="fa-solid fa-minus"></i></button>
+        </td>
+        <td></td>
+      </tr>
+    </template>
+
+    <!-- Template Footer Carrito -->
+    <template id="templateFooterCarrito">
+      <th class="pt-2" scope="row">Total:</th>
+      <th class="pt-2">Cantidad</th>
+      <th></th>
+      <th>Precio-Total</th>
+    </template>
+
+    <!-- Template Contador Carrito -->
+    <template id="templateContador">
+      <button
+        id="open"
+        class="nav-link text-body btn btn-primary"
+        type="button"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasRight"
+        aria-controls="offcanvasRight"
+      >
+        <i class="bi bi-cart fa-lg"></i><span id="contador-carrito">0</span>
+      </button>
+    </template>
+
+    <template id="templateProcesarCompra">
+      <div class="col">
+        <div class="card">
+          <a href="">
+            <img
+              src=""
+              class="card-img-top"
+              alt="..."
+              style="width: 100%; height: 250px"
+            />
+          </a>
+          <div class="card-body">
+            <a href="">
+              <h5 class="card-title"></h5>
+            </a>
+            <p class="text-muted"></p>
+            <h6><s class="pReal"></s></h6>
+            <h6></h6>
+            <p></p>
+            <button
+              type="button"
+              class="btn btn-secondary agregarCarrito"
+              id=""
+            >
+              Añadir al carrito <i class="fa-solid fa-cart-shopping"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </template>
+
+    <!-- *** Código JavaScript *** -->
+    <!-- Archivo Principal -->
+    <script defer src="app.js"></script>
+  </body>
+</html>

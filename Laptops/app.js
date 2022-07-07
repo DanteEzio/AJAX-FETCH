@@ -28,6 +28,8 @@ const fetchData = async () => {
 };
 
 const contenedorProductos = document.querySelector("#contenedorLaptops");
+const bloquear = document.querySelector(".agregarCarrito");
+
 const mostrarProductos = () => {
   let cards = " ";
 
@@ -62,11 +64,9 @@ const mostrarProductos = () => {
               </div>
       </div>
     `;
-    // if (item.stock == 0) {
-    //   contenedorProductos.innerHTML = "";
-    //   return
-    // }
+
     contenedorProductos.innerHTML += cards;
+
   });
 };
 
@@ -95,8 +95,8 @@ let carrito = {};
 
 const detectarBotones = () => {
   const botones = document.querySelectorAll(".card-body button");
-
   // console.log(botones)
+
 
   botones.forEach((btn) => {
     btn.addEventListener("click", () => {
@@ -109,6 +109,7 @@ const detectarBotones = () => {
       if (producto.cantidad >= producto.stock) {
         return sinStock("Sin Stock Adicional!");
       }
+
 
       // Aquí estamos agregando el atributo cantidad, que sería la cantidad de productos que estaría comprando el usuario
       producto.cantidad = 1;
@@ -130,6 +131,12 @@ const detectarBotones = () => {
 
       mostrarCarrito();
     });
+
+    //Aquí estamos diciendo que si no hay mas stock en existencia deshabilite el boton para comprar
+    const producto1 = data.find((item) => `boton${item.id}` == btn.id);
+    if (producto1.stock == 0) {
+      return (btn.disabled = true);
+    }
   });
 };
 
@@ -283,7 +290,7 @@ const mostrarFooterCarrito = () => {
     detectarBotones();
     mostrarCarrito();
 
-    // localStorage.setItem("data", JSON.stringify(data));
+    localStorage.setItem("data", JSON.stringify(data));
   });
 };
 
@@ -350,10 +357,10 @@ accionBotones = () => {
       if (producto.stock > producto.cantidad) {
         producto.cantidad++;
         carrito[btn.dataset.id] = { ...producto };
-        mostrarCarrito();
       } else {
         sinStock("Sin Stock Adicional!");
       }
+      mostrarCarrito();
     });
   });
 

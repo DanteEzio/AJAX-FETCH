@@ -283,7 +283,7 @@ const mostrarFooterCarrito = () => {
     detectarBotones();
     mostrarCarrito();
 
-    // localStorage.setItem("data", JSON.stringify(data));
+    localStorage.setItem("data", JSON.stringify(data));
   });
 };
 

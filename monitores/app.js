@@ -13,12 +13,8 @@ document.addEventListener("DOMContentLoaded", () => {
 // Esta función nos ayuda a poder leer nuestro archivo JSON
 const fetchData = async () => {
   try {
-    if (localStorage.getItem("data")) {
-      data = JSON.parse(localStorage.getItem("data"));
-    } else {
-      const res = await fetch("api.json");
-      data = await res.json();
-    }
+    const res = await fetch("monitores.json");
+    data = await res.json();
     // console.log(data)
     mostrarProductos(data);
     detectarBotones(data);
@@ -28,6 +24,8 @@ const fetchData = async () => {
 };
 
 const contenedorProductos = document.querySelector("#contenedorMonitores");
+const bloquear = document.querySelector(".agregarCarrito");
+
 const mostrarProductos = () => {
   let cards = " ";
 
@@ -62,10 +60,7 @@ const mostrarProductos = () => {
               </div>
       </div>
     `;
-    // if (item.stock == 0) {
-    //   contenedorProductos.innerHTML = "";
-    //   return
-    // }
+
     contenedorProductos.innerHTML += cards;
   });
 };
@@ -95,7 +90,6 @@ let carrito = {};
 
 const detectarBotones = () => {
   const botones = document.querySelectorAll(".card-body button");
-
   // console.log(botones)
 
   botones.forEach((btn) => {
@@ -130,6 +124,12 @@ const detectarBotones = () => {
 
       mostrarCarrito();
     });
+
+    //Aquí estamos diciendo que si no hay mas stock en existencia deshabilite el boton para comprar
+    const producto1 = data.find((item) => `boton${item.id}` == btn.id);
+    if (producto1.stock == 0) {
+      return (btn.disabled = true);
+    }
   });
 };
 
@@ -166,7 +166,7 @@ const mostrarCarrito = () => {
   mostrarFooterCarrito();
   accionBotones();
 
-  localStorage.setItem("carrito", JSON.stringify(carrito));
+  // localStorage.setItem("carrito", JSON.stringify(carrito));
 };
 
 const footerCarrito = document.querySelector("#footerCarrito");
@@ -283,7 +283,7 @@ const mostrarFooterCarrito = () => {
     detectarBotones();
     mostrarCarrito();
 
-    // localStorage.setItem("data", JSON.stringify(data));
+    localStorage.setItem("data", JSON.stringify(data));
   });
 };
 
@@ -350,10 +350,10 @@ accionBotones = () => {
       if (producto.stock > producto.cantidad) {
         producto.cantidad++;
         carrito[btn.dataset.id] = { ...producto };
-        mostrarCarrito();
       } else {
         sinStock("Sin Stock Adicional!");
       }
+      mostrarCarrito();
     });
   });
 

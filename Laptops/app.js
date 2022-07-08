@@ -16,7 +16,7 @@ const fetchData = async () => {
     if (localStorage.getItem("data")) {
       data = JSON.parse(localStorage.getItem("data"));
     } else {
-      const res = await fetch("api.json");
+      const res = await fetch("laptops.json");
       data = await res.json();
     }
     // console.log(data)
@@ -66,7 +66,6 @@ const mostrarProductos = () => {
     `;
 
     contenedorProductos.innerHTML += cards;
-
   });
 };
 
@@ -97,7 +96,6 @@ const detectarBotones = () => {
   const botones = document.querySelectorAll(".card-body button");
   // console.log(botones)
 
-
   botones.forEach((btn) => {
     btn.addEventListener("click", () => {
       // console.log(`Se selecciono ${btn.id}`);
@@ -109,7 +107,6 @@ const detectarBotones = () => {
       if (producto.cantidad >= producto.stock) {
         return sinStock("Sin Stock Adicional!");
       }
-
 
       // Aquí estamos agregando el atributo cantidad, que sería la cantidad de productos que estaría comprando el usuario
       producto.cantidad = 1;

@@ -16,7 +16,7 @@ const fetchData = async () => {
     if (localStorage.getItem("data")) {
       data = JSON.parse(localStorage.getItem("data"));
     } else {
-      const res = await fetch("api.json");
+      const res = await fetch("laptops.json");
       data = await res.json();
     }
     // console.log(data)

@@ -1,7 +1,7 @@
 [
    {
       "id":1,
-      "img":"../imagenes/3060Ti.webp",
+      "img":"https://raw.githubusercontent.com/DanteEzio/AJAX-FETCH/master/imagenes/3060Ti.webp",
       "nombre":"RTX 3060 Ti Twin Edge",
       "descripcion":"Tarjeta de Video ZOTAC NVIDIA GeForce RTX 3060 Ti Twin Edge, 8GB 256-bit GDDR6, PCI Express x16 4.0",
       "sku":"ZT-A30610E-10MLHR",
@@ -11,7 +11,7 @@
    },
    {
       "id":2,
-      "img":"../imagenes/3080.webp",
+      "img":"https://raw.githubusercontent.com/DanteEzio/AJAX-FETCH/master/imagenes/3080.webp",
       "nombre":"RTX 3080 Trinity LHR",
       "descripcion":"Tarjeta de Video Zotac NVIDIA GeForce RTX 3080 Trinity LHR, 10GB 320-bit GDDR6X, PCI Express x16 4.0",
       "sku":"ZT-A30800D-10PLHR",
@@ -21,7 +21,7 @@
    },
    {
       "id":3,
-      "img":"../imagenes/3050.webp",
+      "img":"https://raw.githubusercontent.com/DanteEzio/AJAX-FETCH/master/imagenes/3050.webp",
       "nombre":"RTX 3050 OC",
       "descripcion":"Tarjeta de Video ASUS NVIDIA Dual GeForce RTX 3050 OC, 8GB 128-bit GDDR6, PCI Express 4.0",
       "sku":"DUAL-RTX3050-O8G",
@@ -31,7 +31,7 @@
    },
    {
       "id":4,
-      "img":"../imagenes/3080Ti.jpg",
+      "img":"https://raw.githubusercontent.com/DanteEzio/AJAX-FETCH/master/imagenes/3080Ti.jpg",
       "nombre":"RTX 3080 Ti Trinity",
       "descripcion":"Tarjeta de Video Zotac NVIDIA GeForce RTX 3080 Ti Trinity, 12GB 384-bit GDDR6X, PCI Express x16 4.0",
       "sku":"ZT-A30810D-10P",
@@ -41,7 +41,7 @@
    },
    {
       "id":5,
-      "img":"../imagenes/3070Ti.webp",
+      "img":"https://raw.githubusercontent.com/DanteEzio/AJAX-FETCH/master/imagenes/3070Ti.webp",
       "nombre":"RTX 3070 Ti OC",
       "descripcion":"Tarjeta de Video ASUS TUF Gaming NVIDIA GeForce RTX 3070 Ti OC, 8GB 256-bit GDDR6X, PCI Express 4.0",
       "sku":"TUF-RTX3070TI-O8G-GAMING",
@@ -51,7 +51,7 @@
    },
    {
       "id":6,
-      "img":"../imagenes/3060.webp",
+      "img":"https://raw.githubusercontent.com/DanteEzio/AJAX-FETCH/master/imagenes/3060.webp",
       "nombre":"RTX 3060 DUAL",
       "descripcion":"Tarjeta de Video Palit NVIDIA GeForce RTX 3060 DUAL, 12GB 192-bit GDDR6, PCI Express x16 4.0",
       "sku":"NE63060019K9-190AD",
@@ -61,7 +61,7 @@
    },
    {
       "id":7,
-      "img":"../imagenes/3070.webp",
+      "img":"https://raw.githubusercontent.com/DanteEzio/AJAX-FETCH/master/imagenes/3070.webp",
       "nombre":"RTX 3070 GamingPro",
       "descripcion":"Tarjeta de Video Palit NVIDIA GeForce RTX 3070 GamingPro, 8GB 256-bit GDDR6, PCI Express 4.0",
       "sku":"NE63070019P2-1041A",
@@ -71,7 +71,7 @@
    },
    {
       "id":8,
-      "img":"../imagenes/3090.jpg",
+      "img":"https://raw.githubusercontent.com/DanteEzio/AJAX-FETCH/master/imagenes/3090.jpg",
       "nombre":"RTX 3090 Trinity Gaming",
       "descripcion":"Tarjeta de Video Zotac NVIDIA GeForce RTX 3090 Trinity Gaming, 24GB 384-bit GDDR6X, PCI Express x16 4.0",
       "sku":"ZT-A30900D-10P",

@@ -1,7 +1,7 @@
 [
    {
       "id":1,
-      "img":"../imagenes/monitor-1.jpg",
+      "img":"https://raw.githubusercontent.com/DanteEzio/AJAX-FETCH/master/imagenes/monitor-1.jpg",
       "nombre":"LG 27GL650F-B Monitor",
       "descripcion":"LG 27GL650F-B Monitor de Juegos Compatible con G-Sync Full HD de 27 Pulgadas con frecuencia de actualización de 144Hz y HDR 10",
       "sku":"LG27GL650F-B",
@@ -11,7 +11,7 @@
    },
    {
       "id":2,
-      "img":"../imagenes/monitor-2.jpg",
+      "img":"https://raw.githubusercontent.com/DanteEzio/AJAX-FETCH/master/imagenes/monitor-2.jpg",
       "nombre":"Asus Monitor IPS TUF",
       "descripcion":"Asus Monitor IPS TUF Gaming VG27AQ, 27', WQHD (2560 x 1440), 165Hz, G-Sync, HDMI, DisplayPort (VG27AQ) ",
       "sku":"VG27AQ",
@@ -21,7 +21,7 @@
    },
    {
       "id":3,
-      "img":"../imagenes/monitor-3.jpg",
+      "img":"https://raw.githubusercontent.com/DanteEzio/AJAX-FETCH/master/imagenes/monitor-3.jpg",
       "nombre":"LG 34GL750-B, Monitor 34'",
       "descripcion":"LG 34GL750-B, Monitor 34' Gaming UltraGear, UltraWide 21:9, 144Hz ,1ms, IPS, Adaptative Sync, G Sync, AMD Free Sync.",
       "sku":"34GL750-B",
@@ -31,7 +31,7 @@
    },
    {
       "id":4,
-      "img":"../imagenes/monitor-4.jpg",
+      "img":"https://raw.githubusercontent.com/DanteEzio/AJAX-FETCH/master/imagenes/monitor-4.jpg",
       "nombre":"LG 27GP750-B 27” Ultragear",
       "descripcion":"LG 27GP750-B 27” Ultragear FHD (1920 x 1080) IPS Gaming Monitor w/ 1ms Response Time & 240Hz Refresh Rate, NVIDIA G-Sync",
       "sku":"27GP750-B",
@@ -41,7 +41,7 @@
    },
    {
       "id":5,
-      "img":"../imagenes/monitor-5.jpg",
+      "img":"https://raw.githubusercontent.com/DanteEzio/AJAX-FETCH/master/imagenes/monitor-5.jpg",
       "nombre":"LG 34GN850-B UltraWide Gaming Monitor 34'",
       "descripcion":"LG 34GN850-B UltraWide Gaming Monitor 34' Nano IPS Curved WQHD 144Hz 1ms G-Sync Compatible, FreeSync DP, HDMI USB3.0 1U/2D, HDR400",
       "sku":"34GN850-B",
@@ -51,7 +51,7 @@
    },
    {
       "id":6,
-      "img":"../imagenes/monitor-6.jpg",
+      "img":"https://raw.githubusercontent.com/DanteEzio/AJAX-FETCH/master/imagenes/monitor-6.jpg",
       "nombre":"LG Ultragear - Monitor para Videojuegos, 27 Pulgadas",
       "descripcion":"LG Ultragear - Monitor para Videojuegos, 27 Pulgadas, QHD Nano IPS 1ms, Compatible con NVIDIA G-Sync, 27 Pulgadas Nano IPS...",
       "sku":"NE63060019K9-190AD",
@@ -61,7 +61,7 @@
    },
    {
       "id":7,
-      "img":"../imagenes/monitor-7.jpg",
+      "img":"https://raw.githubusercontent.com/DanteEzio/AJAX-FETCH/master/imagenes/monitor-7.jpg",
       "nombre":"Alienware AW2521H - Monitor",
       "descripcion":"Alienware AW2521H - Monitor de juegos de 360 Hz FHD de 24.5 pulgadas (Full HD 1920 x 1080p), certificado NVIDIA G-SYNC...",
       "sku":"AW2521H",
@@ -71,7 +71,7 @@
    },
    {
       "id":8,
-      "img":"../imagenes/monitor-8.jpg",
+      "img":"https://raw.githubusercontent.com/DanteEzio/AJAX-FETCH/master/imagenes/monitor-8.jpg",
       "nombre":"Laptop AORUS 17 YE5 17.3'",
       "descripcion":"Asus Monitor ROG Swift 360Hz PG259QNR Esports NVIDIA G-Sync Gaming Monitor - 24,5 Pulgadas FHD, NVIDIA Reflex, 360 Hz...",
       "sku":"PG259QNR",

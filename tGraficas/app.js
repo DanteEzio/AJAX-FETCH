@@ -16,7 +16,7 @@ const fetchData = async () => {
     if (localStorage.getItem("data")) {
       data = JSON.parse(localStorage.getItem("data"));
     } else {
-      const res = await fetch("tGraficas.json");
+      const res = await fetch("../productos.json");
       data = await res.json();
     }
     // console.log(data)
@@ -27,13 +27,15 @@ const fetchData = async () => {
   }
 };
 
-const contenedorProductos = document.querySelector("#contenedorTGraficas");
+const contenedorTGraficas = document.querySelector("#contenedorTGraficas");
 const bloquear = document.querySelector(".agregarCarrito");
 
 const mostrarProductos = () => {
-  let cards = " ";
+  let cards = "";
 
-  data.forEach((item) => {
+  let tGraficas = data.filter((p) => p.categoria === "tGraficas");
+
+  tGraficas.forEach((item) => {
     cards = `
       <div class="col">
               <div class="card">
@@ -64,9 +66,10 @@ const mostrarProductos = () => {
               </div>
       </div>
     `;
-
-    contenedorProductos.innerHTML += cards;
+    contenedorTGraficas.innerHTML += cards;
+    // console.log(cards);
   });
+
 };
 
 const alertAgregar = (mensaje) => {
@@ -282,7 +285,7 @@ const mostrarFooterCarrito = () => {
     );
     carrito = {};
 
-    contenedorProductos.innerHTML = "";
+    contenedorTGraficas.innerHTML = "";
     mostrarProductos();
     detectarBotones();
     mostrarCarrito();

@@ -16,7 +16,7 @@ const fetchData = async () => {
     if (localStorage.getItem("data")) {
       data = JSON.parse(localStorage.getItem("data"));
     } else {
-      const res = await fetch("laptops.json");
+      const res = await fetch("../productos.json");
       data = await res.json();
     }
     // console.log(data)
@@ -27,13 +27,15 @@ const fetchData = async () => {
   }
 };
 
-const contenedorProductos = document.querySelector("#contenedorLaptops");
+const contenedorLaptops = document.querySelector("#contenedorLaptops");
 const bloquear = document.querySelector(".agregarCarrito");
 
 const mostrarProductos = () => {
-  let cards = " ";
+  let cards = "";
 
-  data.forEach((item) => {
+  let laptops = data.filter((p) => p.categoria === "laptops");
+
+  laptops.forEach((item) => {
     cards = `
       <div class="col">
               <div class="card">
@@ -64,8 +66,8 @@ const mostrarProductos = () => {
               </div>
       </div>
     `;
-
-    contenedorProductos.innerHTML += cards;
+    contenedorLaptops.innerHTML += cards;
+    // console.log(cards);
   });
 };
 
@@ -282,7 +284,7 @@ const mostrarFooterCarrito = () => {
     );
     carrito = {};
 
-    contenedorProductos.innerHTML = "";
+    contenedorLaptops.innerHTML = "";
     mostrarProductos();
     detectarBotones();
     mostrarCarrito();

@@ -16,23 +16,33 @@ const fetchData = async () => {
     if (localStorage.getItem("data")) {
       data = JSON.parse(localStorage.getItem("data"));
     } else {
-      const res = await fetch("laptops.json");
+      const res = await fetch("productos.json");
       data = await res.json();
     }
     // console.log(data)
-    mostrarProductos(data);
+    // mostrarProductos(data);
     detectarBotones(data);
   } catch (error) {
     console.log(error);
   }
 };
 
-const contenedorProductos = document.querySelector("#contenedorProductos");
-const mostrarProductos = () => {
-  let cards = " ";
+const contenedorLaptops = document.querySelector("#contenedorLaptops");
+const contenedorTGraficas = document.querySelector("#contenedorTGraficas");
+const contenedormonitores = document.querySelector("#contenedormonitores");
+const bloquear = document.querySelector(".agregarCarrito");
 
-  data.forEach((item) => {
-    cards = `
+const mostrarProductos = () => {
+  let cards1 = "";
+  let cards2 = "";
+  let cards3 = "";
+
+  let laptops = data.filter((p) => p.categoria === "laptops");
+  let tGraficas = data.filter((p) => p.categoria === "tGraficas");
+  let monitores = data.filter((p) => p.categoria === "monitores");
+
+  laptops.forEach((item) => {
+    cards1 = `
       <div class="col">
               <div class="card">
                 <a href="">
@@ -62,11 +72,78 @@ const mostrarProductos = () => {
               </div>
       </div>
     `;
-    // if (item.stock == 0) {
-    //   contenedorProductos.innerHTML = "";
-    //   return
-    // }
-    contenedorProductos.innerHTML += cards;
+    contenedorLaptops.innerHTML += cards1;
+    // console.log(cards);
+  });
+
+  tGraficas.forEach((item) => {
+    cards2 = `
+      <div class="col">
+              <div class="card">
+                <a href="">
+                  <img
+                  src="${item.img}"
+                  class="card-img-top"
+                  alt="..."
+                  style="width: 100%; height: 250px"
+                />
+                </a>
+                <div class="card-body">
+                  <a href="">
+                    <h5 class="card-title">
+                      ${item.descripcion}
+                    </h5>
+                  </a>
+                  <p class="text-muted">${item.sku}</p>
+                  <h6><s>$${item.pReal.toLocaleString()} MXN</s></h6>
+                  <h6>$${item.pDescuento.toLocaleString()} MXN</h6>
+                  <p>Disponibles: ${item.stock}pzs.</p>
+                  <button type="button" class="btn btn-secondary agregarCarrito" id=boton${
+                    item.id
+                  }>
+                    Añadir al carrito <i class="fa-solid fa-cart-shopping"></i>
+                  </button>
+                </div>
+              </div>
+      </div>
+    `;
+    contenedorTGraficas.innerHTML += cards2;
+    // console.log(cards);
+  });
+
+  monitores.forEach((item) => {
+    cards3 = `
+      <div class="col">
+              <div class="card">
+                <a href="">
+                  <img
+                  src="${item.img}"
+                  class="card-img-top"
+                  alt="..."
+                  style="width: 100%; height: 250px"
+                />
+                </a>
+                <div class="card-body">
+                  <a href="">
+                    <h5 class="card-title">
+                      ${item.descripcion}
+                    </h5>
+                  </a>
+                  <p class="text-muted">${item.sku}</p>
+                  <h6><s>$${item.pReal.toLocaleString()} MXN</s></h6>
+                  <h6>$${item.pDescuento.toLocaleString()} MXN</h6>
+                  <p>Disponibles: ${item.stock}pzs.</p>
+                  <button type="button" class="btn btn-secondary agregarCarrito" id=boton${
+                    item.id
+                  }>
+                    Añadir al carrito <i class="fa-solid fa-cart-shopping"></i>
+                  </button>
+                </div>
+              </div>
+      </div>
+    `;
+    contenedormonitores.innerHTML += cards3;
+    // console.log(cards);
   });
 };
 
@@ -95,7 +172,6 @@ let carrito = {};
 
 const detectarBotones = () => {
   const botones = document.querySelectorAll(".card-body button");
-
   // console.log(botones)
 
   botones.forEach((btn) => {
@@ -130,6 +206,12 @@ const detectarBotones = () => {
 
       mostrarCarrito();
     });
+
+    //Aquí estamos diciendo que si no hay mas stock en existencia deshabilite el boton para comprar
+    const producto1 = data.find((item) => `boton${item.id}` == btn.id);
+    if (producto1.stock == 0) {
+      return (btn.disabled = true);
+    }
   });
 };
 
@@ -278,7 +360,9 @@ const mostrarFooterCarrito = () => {
     );
     carrito = {};
 
-    contenedorProductos.innerHTML = "";
+    contenedorLaptops.innerHTML = "";
+    contenedorTGraficas.innerHTML = "";
+    contenedormonitores.innerHTML = "";
     mostrarProductos();
     detectarBotones();
     mostrarCarrito();
@@ -350,10 +434,10 @@ accionBotones = () => {
       if (producto.stock > producto.cantidad) {
         producto.cantidad++;
         carrito[btn.dataset.id] = { ...producto };
-        mostrarCarrito();
       } else {
         sinStock("Sin Stock Adicional!");
       }
+      mostrarCarrito();
     });
   });
 

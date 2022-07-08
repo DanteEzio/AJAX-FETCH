@@ -13,8 +13,12 @@ document.addEventListener("DOMContentLoaded", () => {
 // Esta función nos ayuda a poder leer nuestro archivo JSON
 const fetchData = async () => {
   try {
-    const res = await fetch("monitores.json");
-    data = await res.json();
+    if (localStorage.getItem("data")) {
+      data = JSON.parse(localStorage.getItem("data"));
+    } else {
+      const res = await fetch("../productos.json");
+      data = await res.json();
+    }
     // console.log(data)
     mostrarProductos(data);
     detectarBotones(data);
@@ -23,13 +27,15 @@ const fetchData = async () => {
   }
 };
 
-const contenedorProductos = document.querySelector("#contenedorMonitores");
+const contenedorMonitores = document.querySelector("#contenedorMonitores");
 const bloquear = document.querySelector(".agregarCarrito");
 
 const mostrarProductos = () => {
-  let cards = " ";
+  let cards = "";
 
-  data.forEach((item) => {
+  let monitores = data.filter((p) => p.categoria === "monitores");
+
+  monitores.forEach((item) => {
     cards = `
       <div class="col">
               <div class="card">
@@ -60,8 +66,8 @@ const mostrarProductos = () => {
               </div>
       </div>
     `;
-
-    contenedorProductos.innerHTML += cards;
+    contenedorMonitores.innerHTML += cards;
+    // console.log(cards);
   });
 };
 
@@ -166,7 +172,7 @@ const mostrarCarrito = () => {
   mostrarFooterCarrito();
   accionBotones();
 
-  // localStorage.setItem("carrito", JSON.stringify(carrito));
+  localStorage.setItem("carrito", JSON.stringify(carrito));
 };
 
 const footerCarrito = document.querySelector("#footerCarrito");
@@ -278,7 +284,7 @@ const mostrarFooterCarrito = () => {
     );
     carrito = {};
 
-    contenedorProductos.innerHTML = "";
+    contenedorMonitores.innerHTML = "";
     mostrarProductos();
     detectarBotones();
     mostrarCarrito();

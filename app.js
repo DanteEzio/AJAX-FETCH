@@ -1,3 +1,5 @@
+// *** En nuestra página principal únicamente se agregan las funciones que son utilizadas realmente para el funcionamiento del carrito de compras, ya que aquí una de las funciones que no es necesaria utilizar es mostrarProductos()
+
 let data;
 
 //Aqui se cargan los productos y se lee nuestro sitio web
@@ -250,9 +252,9 @@ const mostrarFooterCarrito = () => {
       "Felicidades!! Su compra se realizó de manera exitosa, pronto nos pondremos en contacto con usted."
     );
     carrito = {};
-
     detectarBotones();
     mostrarCarrito();
+    // Finalmente aquí estamos guardando la información de lo que tenemos tanto en el carrito como en nuestra base de datos
     localStorage.setItem("carrito", JSON.stringify(carrito));
     localStorage.setItem("data", JSON.stringify(data));
   });

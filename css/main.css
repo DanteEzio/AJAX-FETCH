@@ -627,6 +627,7 @@ main .laptops .caracteristicas-5 h1 {
   line-height: 1em;
 }
 main .laptops .caracteristicas-5 .container .col .card {
+  height: 100%;
   border: none;
   background-color: #eee;
   box-shadow: 0 0 15px 3px rgba(117, 185, 0, 0.7607843137);
@@ -1139,6 +1140,7 @@ main .tGraficas .caracteristicas-5 .container {
   padding-top: 25px;
 }
 main .tGraficas .caracteristicas-5 .container .col .card {
+  height: 100%;
   border: none;
   background-color: #eee;
   box-shadow: 0 0 15px 3px rgba(117, 185, 0, 0.7607843137);
@@ -1576,6 +1578,7 @@ main .monitores .caracteristicas-5 .container {
   padding-top: 25px;
 }
 main .monitores .caracteristicas-5 .container .col .card {
+  height: 100%;
   border: none;
   background-color: #eee;
   box-shadow: 0 0 15px 3px rgba(117, 185, 0, 0.7607843137);

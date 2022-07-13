@@ -28,6 +28,7 @@ const fetchData = async () => {
   }
 };
 
+// Esta función nos permite mostrar nuestros productos en pantalla utilizando el metodo filter para filtrar los productos que queremos mostrar con base en la página  consultada (laptops, monitores, tGraficas)
 const contenedorProductos = document.querySelector("#contenedorLaptops");
 const mostrarProductos = () => {
   let cards = "";
@@ -301,6 +302,7 @@ const mostrarFooterCarrito = () => {
     mostrarProductos();
     detectarBotones();
     mostrarCarrito();
+    // Finalmente aquí estamos guardando la información de lo que tenemos tanto en el carrito como en nuestra base de datos
     localStorage.setItem("carrito", JSON.stringify(carrito));
     localStorage.setItem("data", JSON.stringify(data));
   });

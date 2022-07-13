@@ -800,6 +800,7 @@ main {
       .container {
         .col {
           .card {
+            height: 100%;
             border: none;
             background-color: #eee;
             box-shadow: 0 0 15px 3px #75b900c2;
@@ -1415,6 +1416,7 @@ main {
         padding-top: 25px;
         .col {
           .card {
+            height: 100%;
             border: none;
             background-color: #eee;
             box-shadow: 0 0 15px 3px #75b900c2;
@@ -1929,15 +1931,16 @@ main {
         padding-top: 25px;
         .col {
           .card {
+            height: 100%;
             border: none;
             background-color: #eee;
             box-shadow: 0 0 15px 3px #75b900c2;
 
-            a {
-              img {
-                // object-fit: cover;
-              }
-            }
+            // a {
+            //   img {
+            //     object-fit: cover;
+            //   }
+            // }
             .card-body {
               a {
                 text-decoration: none;

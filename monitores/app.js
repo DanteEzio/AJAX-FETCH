@@ -296,6 +296,7 @@ const mostrarFooterCarrito = () => {
     mostrarProductos();
     detectarBotones();
     mostrarCarrito();
+    // Finalmente aquí estamos guardando la información de lo que tenemos tanto en el carrito como en nuestra base de datos
     localStorage.setItem("carrito", JSON.stringify(carrito));
     localStorage.setItem("data", JSON.stringify(data));
   });

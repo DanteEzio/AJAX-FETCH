@@ -106,7 +106,7 @@ const detectarBotones = () => {
 
       // alert(`Se agrego ${producto.nombre} al carrito`);
 
-      if (producto.cantidad > producto.stock) {
+      if (producto.cantidad >= producto.stock) {
         return sinStock("Sin Stock Adicional!");
       }
 

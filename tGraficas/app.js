@@ -18,6 +18,7 @@ const fetchData = async () => {
     } else {
       const res = await fetch("../productos.json");
       data = await res.json();
+      localStorage.setItem("data", JSON.stringify(data));
     }
     // console.log(data)
     mostrarProductos(data);
@@ -27,9 +28,7 @@ const fetchData = async () => {
   }
 };
 
-const contenedorTGraficas = document.querySelector("#contenedorTGraficas");
-const bloquear = document.querySelector(".agregarCarrito");
-
+const contenedorProductos = document.querySelector("#contenedorTGraficas");
 const mostrarProductos = () => {
   let cards = "";
 
@@ -66,10 +65,9 @@ const mostrarProductos = () => {
               </div>
       </div>
     `;
-    contenedorTGraficas.innerHTML += cards;
+    contenedorProductos.innerHTML += cards;
     // console.log(cards);
   });
-
 };
 
 const alertAgregar = (mensaje) => {
@@ -130,6 +128,9 @@ const detectarBotones = () => {
       // console.log(carrito);
 
       mostrarCarrito();
+
+      //Guardamos
+      localStorage.setItem("carrito", JSON.stringify(carrito));
     });
 
     //Aquí estamos diciendo que si no hay mas stock en existencia deshabilite el boton para comprar
@@ -142,6 +143,7 @@ const detectarBotones = () => {
 
 // Mostrar Carrito-1
 const pAgregados = document.querySelector("#pAgregados");
+
 const mostrarCarrito = () => {
   pAgregados.innerHTML = " ";
 
@@ -173,12 +175,11 @@ const mostrarCarrito = () => {
   mostrarFooterCarrito();
   accionBotones();
 
-  localStorage.setItem("carrito", JSON.stringify(carrito));
+  // localStorage.setItem("carrito", JSON.stringify(carrito));
 };
 
 const footerCarrito = document.querySelector("#footerCarrito");
 const contadorCarrito = document.querySelector("#contadorCar");
-const botonesProcesar = document.querySelector(".botonesProcesar");
 //Esta función nos muestra el footer del carrito (cantidad total y costo total)
 const mostrarFooterCarrito = () => {
   footerCarrito.innerHTML = " ";
@@ -273,11 +274,16 @@ const mostrarFooterCarrito = () => {
   botonProcesarC.addEventListener("click", () => {
     console.log("procesando...");
     Object.values(carrito).forEach((producto) => {
-      let bProcesar = data.find((item) => item.id == producto.id);
+      const bProcesar = data.find((item) => item.id == producto.id);
+      // let bProcesar = data.filter((p) => p.id === "laptops");
 
-      console.log(bProcesar);
-      bProcesar.stock = bProcesar.stock - bProcesar.cantidad;
+      console.log(bProcesar.cantidad);
+      console.log(bProcesar.stock);
+
+      bProcesar.stock = bProcesar.stock - producto.cantidad;
       bProcesar.cantidad = 0;
+      // console.log(bProcesar.stock);
+      // console.log(bProcesar);
     });
     // console.log(data)
     alertProcesar(
@@ -285,11 +291,12 @@ const mostrarFooterCarrito = () => {
     );
     carrito = {};
 
-    contenedorTGraficas.innerHTML = "";
+    contenedorProductos.innerHTML = "";
     mostrarProductos();
     detectarBotones();
     mostrarCarrito();
 
+    localStorage.setItem("carrito", JSON.stringify(carrito));
     localStorage.setItem("data", JSON.stringify(data));
   });
 };
@@ -330,7 +337,7 @@ const sinStock = (mensaje) => {
   });
 };
 
-accionBotones = () => {
+const accionBotones = () => {
   const botonesAgregar = document.querySelectorAll(".incrementar");
   const botonesEliminar = document.querySelectorAll(".decrementar");
   const botonesVaciar = document.querySelectorAll(".eliminar");
@@ -352,15 +359,16 @@ accionBotones = () => {
   botonesAgregar.forEach((btn) => {
     btn.addEventListener("click", () => {
       // console.log("agregando...")
-      const producto = carrito[btn.dataset.id];
+      let producto = carrito[btn.dataset.id];
       // (*** Aqui estamos utilizando spread ***)
+      console.log(producto);
       if (producto.stock > producto.cantidad) {
         producto.cantidad++;
         carrito[btn.dataset.id] = { ...producto };
+        mostrarCarrito();
       } else {
         sinStock("Sin Stock Adicional!");
       }
-      mostrarCarrito();
     });
   });
 
@@ -372,12 +380,11 @@ accionBotones = () => {
       if (producto.cantidad === 0) {
         delete carrito[btn.dataset.id];
         alertEliminar(`Se elimino ${producto.nombre}`);
-        mostrarCarrito();
       } else {
         // (*** Aqui estamos utilizando spread ***)
         carrito[btn.dataset.id] = { ...producto };
-        mostrarCarrito();
       }
+      mostrarCarrito();
       let pCantidad = data.find((item) => item.id == producto.id);
       console.log(pCantidad);
       pCantidad.cantidad = 0;
@@ -402,3 +409,4 @@ const alertProcesar = (mensaje) => {
     color: "#eee",
   });
 };
+

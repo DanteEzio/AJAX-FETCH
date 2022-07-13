@@ -16,136 +16,18 @@ const fetchData = async () => {
     if (localStorage.getItem("data")) {
       data = JSON.parse(localStorage.getItem("data"));
     } else {
-      const res = await fetch("productos.json");
+      const res = await fetch("../productos.json");
       data = await res.json();
+      localStorage.setItem("data", JSON.stringify(data));
     }
     // console.log(data)
-    // mostrarProductos(data);
     detectarBotones(data);
   } catch (error) {
     console.log(error);
   }
 };
 
-const contenedorLaptops = document.querySelector("#contenedorLaptops");
-const contenedorTGraficas = document.querySelector("#contenedorTGraficas");
-const contenedormonitores = document.querySelector("#contenedormonitores");
-const bloquear = document.querySelector(".agregarCarrito");
 
-const mostrarProductos = () => {
-  let cards1 = "";
-  let cards2 = "";
-  let cards3 = "";
-
-  let laptops = data.filter((p) => p.categoria === "laptops");
-  let tGraficas = data.filter((p) => p.categoria === "tGraficas");
-  let monitores = data.filter((p) => p.categoria === "monitores");
-
-  laptops.forEach((item) => {
-    cards1 = `
-      <div class="col">
-              <div class="card">
-                <a href="">
-                  <img
-                  src="${item.img}"
-                  class="card-img-top"
-                  alt="..."
-                  style="width: 100%; height: 250px"
-                />
-                </a>
-                <div class="card-body">
-                  <a href="">
-                    <h5 class="card-title">
-                      ${item.descripcion}
-                    </h5>
-                  </a>
-                  <p class="text-muted">${item.sku}</p>
-                  <h6><s>$${item.pReal.toLocaleString()} MXN</s></h6>
-                  <h6>$${item.pDescuento.toLocaleString()} MXN</h6>
-                  <p>Disponibles: ${item.stock}pzs.</p>
-                  <button type="button" class="btn btn-secondary agregarCarrito" id=boton${
-                    item.id
-                  }>
-                    Añadir al carrito <i class="fa-solid fa-cart-shopping"></i>
-                  </button>
-                </div>
-              </div>
-      </div>
-    `;
-    contenedorLaptops.innerHTML += cards1;
-    // console.log(cards);
-  });
-
-  tGraficas.forEach((item) => {
-    cards2 = `
-      <div class="col">
-              <div class="card">
-                <a href="">
-                  <img
-                  src="${item.img}"
-                  class="card-img-top"
-                  alt="..."
-                  style="width: 100%; height: 250px"
-                />
-                </a>
-                <div class="card-body">
-                  <a href="">
-                    <h5 class="card-title">
-                      ${item.descripcion}
-                    </h5>
-                  </a>
-                  <p class="text-muted">${item.sku}</p>
-                  <h6><s>$${item.pReal.toLocaleString()} MXN</s></h6>
-                  <h6>$${item.pDescuento.toLocaleString()} MXN</h6>
-                  <p>Disponibles: ${item.stock}pzs.</p>
-                  <button type="button" class="btn btn-secondary agregarCarrito" id=boton${
-                    item.id
-                  }>
-                    Añadir al carrito <i class="fa-solid fa-cart-shopping"></i>
-                  </button>
-                </div>
-              </div>
-      </div>
-    `;
-    contenedorTGraficas.innerHTML += cards2;
-    // console.log(cards);
-  });
-
-  monitores.forEach((item) => {
-    cards3 = `
-      <div class="col">
-              <div class="card">
-                <a href="">
-                  <img
-                  src="${item.img}"
-                  class="card-img-top"
-                  alt="..."
-                  style="width: 100%; height: 250px"
-                />
-                </a>
-                <div class="card-body">
-                  <a href="">
-                    <h5 class="card-title">
-                      ${item.descripcion}
-                    </h5>
-                  </a>
-                  <p class="text-muted">${item.sku}</p>
-                  <h6><s>$${item.pReal.toLocaleString()} MXN</s></h6>
-                  <h6>$${item.pDescuento.toLocaleString()} MXN</h6>
-                  <p>Disponibles: ${item.stock}pzs.</p>
-                  <button type="button" class="btn btn-secondary agregarCarrito" id=boton${
-                    item.id
-                  }>
-                    Añadir al carrito <i class="fa-solid fa-cart-shopping"></i>
-                  </button>
-                </div>
-              </div>
-      </div>
-    `;
-    contenedormonitores.innerHTML += cards3;
-    // console.log(cards);
-  });
-};
 
 const alertAgregar = (mensaje) => {
   swal.fire({
@@ -205,6 +87,9 @@ const detectarBotones = () => {
       // console.log(carrito);
 
       mostrarCarrito();
+
+      //Guardamos
+      localStorage.setItem("carrito", JSON.stringify(carrito));
     });
 
     //Aquí estamos diciendo que si no hay mas stock en existencia deshabilite el boton para comprar
@@ -217,6 +102,7 @@ const detectarBotones = () => {
 
 // Mostrar Carrito-1
 const pAgregados = document.querySelector("#pAgregados");
+
 const mostrarCarrito = () => {
   pAgregados.innerHTML = " ";
 
@@ -248,12 +134,11 @@ const mostrarCarrito = () => {
   mostrarFooterCarrito();
   accionBotones();
 
-  localStorage.setItem("carrito", JSON.stringify(carrito));
+  // localStorage.setItem("carrito", JSON.stringify(carrito));
 };
 
 const footerCarrito = document.querySelector("#footerCarrito");
 const contadorCarrito = document.querySelector("#contadorCar");
-const botonesProcesar = document.querySelector(".botonesProcesar");
 //Esta función nos muestra el footer del carrito (cantidad total y costo total)
 const mostrarFooterCarrito = () => {
   footerCarrito.innerHTML = " ";
@@ -341,6 +226,7 @@ const mostrarFooterCarrito = () => {
     carrito = {};
 
     mostrarCarrito();
+    localStorage.setItem("carrito", JSON.stringify(carrito));
   });
 
   //Esta función nos permite procesar la compra
@@ -348,11 +234,16 @@ const mostrarFooterCarrito = () => {
   botonProcesarC.addEventListener("click", () => {
     console.log("procesando...");
     Object.values(carrito).forEach((producto) => {
-      let bProcesar = data.find((item) => item.id == producto.id);
+      const bProcesar = data.find((item) => item.id == producto.id);
+      // let bProcesar = data.filter((p) => p.id === "laptops");
 
-      console.log(bProcesar);
-      bProcesar.stock = bProcesar.stock - bProcesar.cantidad;
+      console.log(bProcesar.cantidad);
+      console.log(bProcesar.stock);
+
+      bProcesar.stock = bProcesar.stock - producto.cantidad;
       bProcesar.cantidad = 0;
+      // console.log(bProcesar.stock);
+      // console.log(bProcesar);
     });
     // console.log(data)
     alertProcesar(
@@ -360,13 +251,9 @@ const mostrarFooterCarrito = () => {
     );
     carrito = {};
 
-    contenedorLaptops.innerHTML = "";
-    contenedorTGraficas.innerHTML = "";
-    contenedormonitores.innerHTML = "";
-    mostrarProductos();
     detectarBotones();
     mostrarCarrito();
-
+    localStorage.setItem("carrito", JSON.stringify(carrito));
     localStorage.setItem("data", JSON.stringify(data));
   });
 };
@@ -407,7 +294,7 @@ const sinStock = (mensaje) => {
   });
 };
 
-accionBotones = () => {
+const accionBotones = () => {
   const botonesAgregar = document.querySelectorAll(".incrementar");
   const botonesEliminar = document.querySelectorAll(".decrementar");
   const botonesVaciar = document.querySelectorAll(".eliminar");
@@ -423,21 +310,24 @@ accionBotones = () => {
       pCantidad.cantidad = 0;
       // console.log(producto);
       mostrarCarrito();
+      localStorage.setItem("carrito", JSON.stringify(carrito));
     });
   });
 
   botonesAgregar.forEach((btn) => {
     btn.addEventListener("click", () => {
       // console.log("agregando...")
-      const producto = carrito[btn.dataset.id];
+      let producto = carrito[btn.dataset.id];
       // (*** Aqui estamos utilizando spread ***)
+      console.log(producto);
       if (producto.stock > producto.cantidad) {
         producto.cantidad++;
         carrito[btn.dataset.id] = { ...producto };
+        mostrarCarrito();
       } else {
         sinStock("Sin Stock Adicional!");
       }
-      mostrarCarrito();
+      localStorage.setItem("carrito", JSON.stringify(carrito));
     });
   });
 
@@ -449,15 +339,15 @@ accionBotones = () => {
       if (producto.cantidad === 0) {
         delete carrito[btn.dataset.id];
         alertEliminar(`Se elimino ${producto.nombre}`);
-        mostrarCarrito();
       } else {
         // (*** Aqui estamos utilizando spread ***)
         carrito[btn.dataset.id] = { ...producto };
-        mostrarCarrito();
       }
+      mostrarCarrito();
       let pCantidad = data.find((item) => item.id == producto.id);
       console.log(pCantidad);
       pCantidad.cantidad = 0;
+      localStorage.setItem("carrito", JSON.stringify(carrito));
     });
   });
 };
